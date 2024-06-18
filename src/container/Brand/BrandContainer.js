@@ -29,7 +29,7 @@ const BrandContainer = ({ classOption }) => {
         }
     }
     return (
-        <div className={`brand-section section ${classOption}`}>
+        <div className={`brand-section section ${classOption}`} style={{backgroundColor:'#FAFAFA', padding:"30px"}}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12" data-aos="fade-up">

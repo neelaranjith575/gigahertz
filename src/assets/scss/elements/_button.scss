@@ -2,23 +2,20 @@
 
 .btn {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 50px;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
+    background-color: #116FC6;
     height: 52px;
     padding: 0 40px;
-
     cursor: pointer;
     white-space: nowrap;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 2px;
+    border-radius: 30px;
     outline: none;
-    font-family: var(--ff-link);
+    font-family: 'Inter';
+    color: white;
     // Responsive
     @media #{$large-mobile}{
         font-size: 14px;
@@ -45,7 +42,7 @@
     &-light{
         --bs-btn-bg: var(--clr-white);
         --bs-btn-border-color: var(--clr-white);
-        --bs-btn-color: var(--clr-primary);
+        --bs-btn-color: 'white';
     }
     &-hover{
         &-secondary{

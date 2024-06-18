@@ -150,8 +150,10 @@
     }
 
     & .title {
-        font-size: 32px;
+        font-size: 100px;
         line-height: 42px;
+        font-weight: 400;
+        font-family: "Bebas Neue",;
         margin: 0;
         color: var(--clr-heading);
     }
