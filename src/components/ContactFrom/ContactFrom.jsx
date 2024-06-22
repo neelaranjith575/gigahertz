@@ -13,7 +13,7 @@ const ContactFrom = () => {
                     <div className="col-md-6 col-12 mb-6">
                         <input 
                             type="text" 
-                            placeholder="Your Name *" 
+                            placeholder="Name *" 
                             name="name" 
                             {...register("name", {
                                 required: "Name is required",
@@ -22,6 +22,21 @@ const ContactFrom = () => {
                         {errors?.name && <p>{errors.name?.message}</p>}
                     </div>
                     <div className="col-md-6 col-12 mb-6">
+                        <input 
+                            type="tel" 
+                            placeholder="Phone *" 
+                            name="phone" 
+                            {...register("phone", {
+                                required: "Phone is required",
+                                pattern: {
+                                    value: [0-9],
+                                    message: "Please Enter Mobile No",
+                                },
+                            })} 
+                        />
+                        {errors?.phone && <p>{errors.phone?.message}</p>}
+                    </div>
+                    <div className="col-md-12 col-12 mb-6">
                         <input 
                             type="email" 
                             placeholder="Email *" 

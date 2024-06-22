@@ -2,10 +2,8 @@ import React from 'react';
 import {useEffect, useRef} from "react";
 import contactDataTwo from '../../data/contactInfo/contactInfoTwo.json';
 import ContactInfoItem from '../../components/ContactInfo/ContactInfoItemTwo.jsx';
-import SectionTitle from '../../components/SectionTitles/SectionTitle';
-import SectionTitleTwo from '../../components/SectionTitles/SectionTitleTwo';
-import ProjectForm from '../../components/ProjectForm/ProjectForm';
 import Parallax from 'parallax-js';
+import GoogleMap from '../../container/Map/GoogleMap.js';
 
 const ContactInformationTwo = () => {
     const sceneEl = useRef(null);
@@ -21,16 +19,19 @@ const ContactInformationTwo = () => {
 
     }, [])
     return (
-        <div className="section section-padding contact-section">
+        <div className="section section-padding-top contact-section">
 
             <div className="container">
                 <div className="row row-cols-lg-2 row-cols-1 align-items-center">
                     <div className="col" data-aos="fade-up">
+                    <div className="section-title-two mb-8">
+                                {/* <span className="sub-title">Development that converts and delivers</span> */}
+                                <h3 className="title" >
+                                GET IN TOUCH
+                                </h3>
+                            </div>
                         <div className="contact-Information me-xl-7">
-                            <SectionTitleTwo 
-                                subTitle="Innovative &amp; cutting-edge technology"
-                                title="We use latest technologies that are proven and practical"
-                            />
+                            
 
                             {contactDataTwo && contactDataTwo.map((single, key) => {
                                 return(
@@ -42,21 +43,16 @@ const ContactInformationTwo = () => {
                         </div>
                     </div>
                     <div className="col mt-lg-0 mt-md-10 mt-8" data-aos="fade-up">
-                        <div className="contact-form-area box-shadow">
-                            <SectionTitle
-                                titleOption="section-title text-center mb-7"
-                                headingOption="title fz-28"
-                                title="Let’s talk about your project"
-                                subTitle="We have made it easy for clients to reach us
-                                    and get their solutions weaved"
-                            />
-
-                            <ProjectForm />
-
+                    <GoogleMap />
+                    </div>
+                    
+                    <div className="col mt-lg-0 mt-md-10 mt-8" data-aos="fade-up">
+                
+                        <div className="contact-form-area">
                             <div className="shape shape-1" id="scene" ref={sceneEl}>
-                                <span data-depth="1">
+                                {/* <span data-depth="1">
                                     <img src={process.env.PUBLIC_URL + "/images/shape-animation/contact-shape.png"} alt="" />
-                                </span>
+                                </span> */}
                             </div>
                         </div>
                     </div>

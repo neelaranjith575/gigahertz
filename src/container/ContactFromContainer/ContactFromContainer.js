@@ -7,11 +7,11 @@ const ContactFromContainer = () => {
         <div className="contact-form-section section section-padding-t90-b100 bg-primary-blue">
             <div className="container">
                 <div className="row">
-                    <div className="offset-lg-2 col-lg-8">
+                    <div >
                         <SectionTitle
                             headingOption="fz-32"
-                            title="Let’s talk about your project"
-                            subTitle="We have made it easy for clients to reach us and get their solutions weaved"
+                            title="PLEASE FILL THE REQUIREMENTS"
+                            subTitle=""
                         />
                         <ContactFrom />
                     </div>

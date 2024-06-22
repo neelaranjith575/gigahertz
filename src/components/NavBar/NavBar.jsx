@@ -13,12 +13,13 @@ const NavBar = () => {
                     <NavLink to={process.env.PUBLIC_URL + "/about"}><span className="menu-text">ABOUT US</span></NavLink>
                 </li>
                 <li className="has-children">
-                    <NavLink to={process.env.PUBLIC_URL + "/service"}><span className="menu-text">PRODUCT & SERVICES </span></NavLink>
+                    <NavLink to={process.env.PUBLIC_URL + "/"}><span className="menu-text">PRODUCT & SERVICES </span></NavLink>
                     <span className="menu-toggle"><i className="far fa-angle-down"></i></span>
                     <ul className="sub-menu">
-                        <li><NavLink to={process.env.PUBLIC_URL + "/home-one"}><span className="menu-text">Home One</span></NavLink></li>
-                        <li><NavLink to={process.env.PUBLIC_URL + "/home-two"}><span className="menu-text">Home Two</span></NavLink></li>
-                        <li><NavLink to={process.env.PUBLIC_URL + "/home-three"}><span className="menu-text">Home Three</span></NavLink></li>
+                        <li><NavLink to={process.env.PUBLIC_URL + "/it-infrastructure"}><span className="menu-text">IT INFRASTRUCTURE</span></NavLink></li>
+                        <li><NavLink to={process.env.PUBLIC_URL + "/enterprise-solutions"}><span className="menu-text">ENTERPRISE SOLUTIONS</span></NavLink></li>
+                        <li><NavLink to={process.env.PUBLIC_URL + "/rental-services"}><span className="menu-text">RENTAL SERVICES</span></NavLink></li>
+                        <li><NavLink to={process.env.PUBLIC_URL + "/managed-services"}><span className="menu-text">MANAGED SERVICES</span></NavLink></li>
                     </ul>
                 </li>
                 {/* <li className="has-children">

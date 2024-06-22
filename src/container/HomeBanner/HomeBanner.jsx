@@ -13,6 +13,7 @@ import { List, ListItem, ListItemText, ListItemIcon } from "@mui/material";
 import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import BadgeOutlinedIcon from "@mui/icons-material/BadgeOutlined";
 import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
+import Bgimage from "../../assets/images/hero-image/bg1.png"
 
 
 
@@ -20,7 +21,7 @@ import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 const HomeBanner = () => {
   return (
     <>
-      <Box sx={{}}>
+      <Box sx={{backgroundImage: `url(${Bgimage})`, backgroundPosition:'center', backgroundSize:'cover', backgroundRepeat:'no-repeat',}}>
         <Stack display={"flex"} alignItems={"center"}>
           <Typography sx={MainHeading}>
             A MODERN APPROACH TO <br></br>

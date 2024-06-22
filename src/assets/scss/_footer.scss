@@ -3,11 +3,11 @@
 /*----------------------------------------*/
 
 .footer-bg-color{
-    background-color: #030e22;
+    background-color: #116FC6;
 }
 
 .footer-section {
-    padding: 100px 0 0px;
+    padding: 50px 0 0px;
     overflow: hidden;
     // Responsive
     @media #{$tablet-device}{
@@ -23,7 +23,7 @@
     line-height: 25px;
     text-align: center;
     padding: 20px 15px;
-    border-top: 1px solid var(--clr-gray-200);
+    border-top: 1px solid white;
     color: var(--clr-white);
     margin-bottom: 0;
 }

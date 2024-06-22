@@ -9,7 +9,7 @@ const HomeSkillWithVideo = () => {
     const [isOpen, setOpen] = useState(false)
 
     return (
-        <div className="video-section section section-padding">
+        <div className="video-section section">
 
             <div className="container">
 

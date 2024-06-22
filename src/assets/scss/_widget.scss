@@ -198,7 +198,7 @@
 }
 
 .footer-logo{
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
 }
 
 .footer-widget-title {
@@ -210,12 +210,15 @@
 .footer-widget-content {
     font-size: 18px;
     font-weight: 500;
-    color: var(--clr-gray-100);
+    color: white;
 
     & p {
         margin-bottom: 5px;
-        color: var(--clr-gray-100);
-        font-family: var(--ff-link);
+        color: white;
+        font-size: 14px;
+        font-family: 'Inter';
+        font-weight: 400;
+        
 
         &:last-child {
             margin-bottom: 0;
@@ -263,10 +266,11 @@
 .footer-social-inline {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: end;
     margin-top: 40px;
     margin-right: -10px;
     margin-bottom: -10px;
+    
 
     & a {
         margin-right: 10px;

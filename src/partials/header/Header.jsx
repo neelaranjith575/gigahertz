@@ -1,7 +1,7 @@
 import {Fragment, useState, useEffect} from "react";
 import Logo from '../../components/logo/Logo';
 import NavBar from '../../components/NavBar/NavBar';
-import HeaderSearch from '../../components/HeaderSearch/HeaderSearch';
+// import HeaderSearch from '../../components/HeaderSearch/HeaderSearch';
 import Btn from '../../components/Btn/Btn';
 import MobileMenu from "../../components/NavBar/MobileMenu"
 import MainSearch from "../../components/NavBar/MainSearch"
@@ -45,7 +45,7 @@ const Header = () => {
                                     
                                 />
                             </div>
-                            <div className="col-auto col-xl d-flex align-items-center justify-content-xl-center justify-content-end order-2 order-xl-1">
+                            <div className="col-auto col-xl-7 d-flex align-items-center justify-content-xl-center justify-content-end order-2 order-xl-1">
                                 <div className="menu-column-area d-none d-xl-block position-static">
                                     <NavBar />
                                 </div>
@@ -59,11 +59,13 @@ const Header = () => {
                                         <i className="icon-top"></i>
                                         <i className="icon-middle"></i>
                                         <i className="icon-bottom"></i>
+                                        <i className="icon-top"></i>
+                                        
                                     </button>
                                 </div>
                             </div>
 
-                            <div className="col-xl-2 col d-none d-sm-flex justify-content-end order-1 order-xl-2">
+                            <div className="col-xl-3 col d-none d-sm-flex justify-content-end order-1 order-xl-2">
                                 <Btn name='MANAGED SERVICES ↗' />
                             </div>
                         </div>

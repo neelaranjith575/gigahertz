@@ -2,29 +2,23 @@
     {
         "id": 1,
         "image": "images/testimonial/90/author-1.png",
-        "desc": "We are completely satisfied with the quality of service that we get. Workers were respectful, efficient, accommodating, cleaned up thoroughly.",
+        "desc": "“Fantastic! Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca”",
         "name": "Thomas Smith",
-        "position": "CEO at Flow"
+        "position": "@CEO"
     },
     {
         "id": 2,
         "image": "images/testimonial/90/author-2.png",
-        "desc": "We are completely satisfied with the quality of service that we get. Workers were respectful, efficient, accommodating, cleaned up thoroughly.",
+        "desc": "“Fantastic! Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca”",
         "name": "Eloise Smith",
-        "position": "CEO at Flow"
+        "position": "@CEO"
     },
     {
         "id": 3,
         "image": "images/testimonial/90/author-3.png",
-        "desc": "I love their flexibility. Even when my request is too complicated to handle. they could still suggest something useful for me.",
+        "desc": "“Fantastic! Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca”",
         "name": "Florence Themes",
-        "position": "/ Multimedia Admin"
-    },
-    {
-        "id": 1,
-        "image": "images/testimonial/90/author-1.png",
-        "desc": "I love their flexibility. Even when my request is too complicated to handle. they could still suggest something useful for me.",
-        "name": "Florence Themes",
-        "position": "/ Multimedia Admin"
+        "position": "@multimedia"
     }
+    
 ]
