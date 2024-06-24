@@ -1,112 +1,124 @@
-import PropTypes from "prop-types";
-import React from 'react';
-import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import BlogDetails from '../../components/Blog/BlogDetails.jsx';
-import Comment from '../../components/Comment/Comment.jsx';
 import SidebarWrap from '../../components/Sidebar/SidebarWrap.jsx';
 import SidebarWidget from '../../components/Sidebar/SidebarWidget.jsx';
-import SidebarBanner from '../../components/Sidebar/SidebarBanner.jsx';
 import SidebarTitle from '../../components/Sidebar/SidebarTitle';
 import SidebarSearch from '../../components/Sidebar/SidebarSearch.jsx';
 import SidebarCategories from '../../components/Sidebar/SidebarCategories.jsx';
 import SidebarPost from '../../components/Sidebar/SidebarPost.jsx';
-import SidebarTag from '../../components/Sidebar/SidebarTag.jsx';
+import SEO from '../../components/SEO.jsx';
+import Header from '../../partials/header/Header.jsx';
+import Breadcrumb from '../Breadcrumb/Breadcrumb.js';
+import CallToAction from '../CallToAction/CallToAction.js';
+import ScrollToTop from '../../components/ScrollToTop.jsx';
+import Footer from '../Footer/Footer.js';
+import { fetchBlogDetails } from '../../api/blogs.js';
+import { IMAGE_URL } from '../../configuration/url.config.js';
 
-const BlogDetailsContainer = ({data}) => {
+const BlogDetailsContainer = ({ initialData }) => {
+    const [blog, setBlog] = useState(initialData || null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const { id } = useParams(); // Get the id from the route parameters
+
+    useEffect(() => {
+        const getBlogDetails = async () => {
+            try {
+                const data = await fetchBlogDetails(id);
+                console.log(data, "data");
+                setBlog(data?.data || null);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        if (!initialData && id) {
+            getBlogDetails();
+        } else {
+            setLoading(false);
+        }
+    }, [id, initialData]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+
+    const imageUrl = `${IMAGE_URL}${blog?.attributes?.ThumbImage?.data?.attributes?.url}`;
+    console.log(imageUrl, "imageUrl")
+
     return (
-        <div className="section section-padding fix">
-            <div className="container">
-                <div className="row mb-n10">
-
-                    <div className="col-lg-8 col-12 order-lg-1 mb-10">
-                        <div className="row row-cols-1 no-gutters">
-                            
-                            <BlogDetails data={data} />
-                            <div className="entry-author">
-                                <div className="author-info">
-                                    <div className="author-avatar">
-                                        <img src={process.env.PUBLIC_URL + "/images/author/blog-author.png"} alt="" />
-                                    </div>
-                                    <div className="author-description">
-                                        <h6 className="author-name">Eloise Smith</h6>
-                                        <span className="designation">CEO at Flow</span>
-                                        <div className="author-biographical-info">
-                                            She is a lawyer, podcaster, speaker, and writer. As an educational content director, she helps develop HasThemes  premium training products.
-                                        </div>
-                                    </div>
-                                </div>
+        <React.Fragment>
+            <SEO title={`Gigahertz || ${blog?.attributes?.Title}`} />
+            <Header />
+            <Breadcrumb
+                image={imageUrl}
+                title={blog?.attributes?.Title}
+                content="Home"
+                contentTwo="Blog Details"
+            />
+            <div className="section section-padding fix">
+                <div className="container">
+                    <div className="row mb-n10">
+                        <div className="col-lg-8 col-12 order-lg-1 mb-10">
+                            <div className="row row-cols-1">
+                                <BlogDetails data={initialData} />
                             </div>
+                        </div>
 
-                            <div className="blog-nav-links">
-                                <h4 className="title">Related Posts </h4>
-                                <div className="nav-list">
-                                    <div className="nav-item prev">
-                                        <div className="inner">
-                                            <Link to={process.env.PUBLIC_URL + `/blog-details/${data.id}`}>
-                                                <div className="hover-bg has-thumbnail" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/pagination/blog-pagination.jpg)`}}></div>
-                                                <span className="cate">Marketing</span>
-                                                <h6>Eleven top tips for developing agile marketing strategies that work</h6>
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                    <div className="nav-item next">
-                                        <div className="inner">
-                                            <Link to={process.env.PUBLIC_URL + `/blog-details/${data.id}`}>
-                                                <div className="hover-bg has-thumbnail" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/pagination/blog-pagination-2.jpg)`}}></div>
-                                                <span className="cate">Startup</span>
-                                                <h6>Growing a startup involves balancing out the financial stack</h6>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className="comment-form-wrap">
-                                <div className="comment-respond">
-                                    <h3 className="title">Leave a Reply</h3>
-                                    <Comment 
-                                        url=""
-                                        id={data.id}
-                                        title={data.title}
-                                    />
-                                </div>
-                            </div>
-
+                        <div className="col-lg-4 col-12 order-lg-2 mb-10">
+                            <SidebarWrap>
+                                {/* <SidebarWidget>
+                                    <SidebarSearch />
+                                </SidebarWidget>
+                                <SidebarWidget>
+                                    <SidebarTitle title="Categories" />
+                                    <SidebarCategories />
+                                </SidebarWidget> */}
+                                <SidebarWidget>
+                                    <h1 style={{fontFamily:'Inter'}}>Latest Posts</h1>
+                                    <SidebarTitle classOption="mb-2" title="" />
+                                    <SidebarPost />
+                                </SidebarWidget>
+                                {/* <SidebarWidget>
+                                    <SidebarBanner />
+                                </SidebarWidget> */}
+                                {/* <SidebarWidget>
+                                    <SidebarTitle title="Popular tags" />
+                                    <SidebarTag />
+                                </SidebarWidget> */}
+                            </SidebarWrap>
                         </div>
                     </div>
-
-                    <div className="col-lg-4 col-12 order-lg-2 mb-10">
-                        <SidebarWrap>
-                            <SidebarWidget>
-                                <SidebarSearch />
-                            </SidebarWidget>
-                            <SidebarWidget>
-                                <SidebarTitle title="Categories" />
-                                <SidebarCategories />
-                            </SidebarWidget>
-                            <SidebarWidget>
-                                <SidebarTitle classOption="mb-2" title="Popular Posts" />
-                                <SidebarPost />
-                            </SidebarWidget>
-                            <SidebarWidget>
-                                <SidebarBanner />
-                            </SidebarWidget>
-                            <SidebarWidget>
-                                <SidebarTitle title="Popular tags" />
-                                <SidebarTag />
-                            </SidebarWidget>
-                        </SidebarWrap>
-                    </div>
-
                 </div>
             </div>
-        </div>
-    )
-}
+            <CallToAction />
+            <Footer />
+            <ScrollToTop />
+        </React.Fragment>
+    );
+};
+
 BlogDetailsContainer.propTypes = {
-    data: PropTypes.object
+    initialData: PropTypes.shape({
+        attributes: PropTypes.shape({
+            PostBy: PropTypes.string.isRequired,
+            Title: PropTypes.string.isRequired,
+            Category: PropTypes.string.isRequired,
+            Long_Description: PropTypes.string.isRequired,
+            Short_Description: PropTypes.string.isRequired,
+            publishedAt: PropTypes.string.isRequired,
+            imageUrl:PropTypes.string.isRequired,
+        }),
+    }),
 };
 
 export default BlogDetailsContainer;

@@ -1,48 +1,85 @@
-import React from 'react';
-import {slugify} from "../../utils";
-import PropTypes from "prop-types";
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
+import { fetchBlogDetails } from '../../api/blogs';
+import { IMAGE_URL } from '../../configuration/url.config';
+
 
 const BlogDetails = ({ data }) => {
-    const cate = data.categories.map((value, i) => {
-        return (
-            <Link to={process.env.PUBLIC_URL + `/category/${slugify(value)}`} key={i}>{value}{i !== data.categories.length - 1 && ","}</Link>
-        )
-        
-    });
+    const [blog, setBlog] = useState(data || null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const { id } = useParams(); 
+
+    useEffect(() => {
+        const getBlogDetails = async () => {
+            try {
+                const data = await fetchBlogDetails(id);
+                setBlog(data?.data || null);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        if (!data && id) {
+            getBlogDetails();
+        } else {
+            setLoading(false);
+        }
+    }, [id, data]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    if (!blog) {
+        return <div>No blog found</div>;
+    }
+
+
+    const imageUrl = `${IMAGE_URL}${blog?.attributes?.ThumbImage?.data?.attributes?.url}`;
+    // console.log(imageUrl, "imageUrl")
+    
+
     return (
-        <div className="blog-3 blog-details col" data-aos="fade-up">
+        <div className="blog-3 blog-details col" >
             <div className="thumbnail">
-                <img className="w-100" src={`${process.env.PUBLIC_URL}/${data.largeImage}`} alt="Blog Image" />
+                <img className="w-100"  src={imageUrl} alt="Blog Image"  />
             </div>
             <div className="info">
-                <h3 className="title">{data.title}</h3>
-                {data.body.map((value, i) => {
-                    return(
-                        <div key={i} className="desc" dangerouslySetInnerHTML={{__html: value}} />
-                    )
-                })}
+                <h3 className="title" style={{fontFamily:'Inter', }}>{blog?.attributes?.Title}</h3>
+                <p>{blog?.attributes?.Long_Description}</p>
                 <ul className="meta mb-0 mt-12">
-                    <li><i className="fa fa-pencil-alt"></i>{data.author}</li>
-                    <li><i className="far fa-calendar"></i>{data.date}</li>
-                    <li><i className="fas fa-tags"></i>{cate}</li>
-                    <li><i className="fas fa-comments"></i>4 Comments</li>
-                    <li className="media"><Link to={process.env.PUBLIC_URL + "/"}><i className="fas fa-share-alt"></i>Share this post</Link>
-                        <div className="list">
-                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                            <a href="#"><i className="fab fa-twitter"></i></a>
-                            <a href="#"><i className="fab fa-linkedin"></i></a>
-                            <a href="#"><i className="fab fa-tumblr-square"></i></a>
-                        </div>
-                    </li>
+                    <li><i className="fa fa-pencil-alt"></i>By Gigaherts Admin</li>
+                    <li><i className="far fa-calendar"></i>{blog?.attributes?.publishedAt}</li>
                 </ul>
             </div>
         </div>
-    )
-}
-
-BlogDetails.propTypes = {
-    data: PropTypes.object
+    );
 };
 
-export default BlogDetails
+BlogDetails.propTypes = {
+    data: PropTypes.shape({
+        attributes: PropTypes.shape({
+            PostBy:PropTypes.string.isRequired,
+            Title: PropTypes.string.isRequired,
+            Category:PropTypes.string.isRequired,
+            Long_Description: PropTypes.string.isRequired,
+            Short_Description: PropTypes.string.isRequired,
+            publishedAt: PropTypes.string.isRequired,
+            imageUrl:PropTypes.string.isRequired,
+        }),
+    }),
+};
+
+BlogDetails.defaultProps = {
+    data: null,
+};
+
+export default BlogDetails;

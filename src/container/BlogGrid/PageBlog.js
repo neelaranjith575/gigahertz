@@ -1,24 +1,51 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import BlogClassicData from '../../data/blog/BlogClassic.json';
+import React, { useState, useEffect } from 'react';
 import BlogItem from '../../components/Blog/BlogItem';
+import { fetchBlogs } from '../../api/blogs';
 
 const PageBlog = () => {
+
+    const [blogs, setBlogs] = useState([]);
+    const [, setLoading] = useState(true);
+    const [, setError] = useState(null);
+
+    useEffect(() => {
+        const getBlogs = async () => {
+            try {
+                const data = await fetchBlogs();
+                setBlogs(data?.data || []);
+                console.log(data, "data")
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        getBlogs();
+    }, []);
+
     return (
         <div className="section section-padding fix">
             <div className="container">
 
                 <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
-                    {BlogClassicData && BlogClassicData.map((single, key) => {
-                            return(
-                                <div key={key} className="col mb-6" data-aos="fade-up">
-                                    <BlogItem data={single} key={key} />
-                                </div>
-                            ); 
-                    })}
+                {blogs.map((blog, key) => (
+                        <div key={key} className="col mb-6" data-aos="fade-up">
+                            <BlogItem
+                                data={{
+                                    id:blog?.id,
+                                    Title: blog?.attributes?.Title,
+                                    Long_Description: blog?.attributes?.Long_Description,
+                                    Short_Description: blog?.attributes?.Short_Description,
+                                    publishedAt: blog?.attributes?.publishedAt,
+                                    ThumbImage: blog?.attributes?.ThumbImage?.data?.attributes?.url
+                                }}
+                            />
+                        </div>
+                    ))}
                 </div>
 
-                <div className="row mt-10">
+                {/* <div className="row mt-10">
                     <div className="col">
 
                         <ul className="pagination center">
@@ -32,7 +59,7 @@ const PageBlog = () => {
                         </ul>
 
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </div>

@@ -1,4 +1,4 @@
-// src/api/testimonials.js
+
 import axios from 'axios';
 import { BASE_URL } from '../configuration/url.config';
 

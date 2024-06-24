@@ -12,6 +12,7 @@ const WorkDetails = lazy(() => import("./pages/WorkDetails"));
 const BlogGrid = lazy(() => import("./pages/BlogGrid"));
 const BlogClassic = lazy(() => import("./pages/BlogClassic"));
 const BlogDetails = lazy(() => import("./pages/BlogDetails"));
+const BlogDetailsContainer = lazy(() => import("./container/BlogGrid/BlogDetailsContainer"));
 const ItInfraStructure = lazy(() => import("./pages/ItInfraStructure"));
 const EnterPriseSolutions = lazy(() => import("./pages/EnterPriseSolutions"));
 const RentalServices = lazy(() => import("./pages/RentalServices"));
@@ -45,11 +46,12 @@ function App() {
                   <Route path={`${process.env.PUBLIC_URL + "/service"}`} element={<Service/>} />
                   <Route path={`${process.env.PUBLIC_URL + "/work"}`} element={<Work/>} />
                   <Route path={`${process.env.PUBLIC_URL + "/work-details/:id"}`} element={<WorkDetails/>} />
-                  <Route path={`${process.env.PUBLIC_URL + "/blog-grid"}`} element={<BlogGrid/>} />
+                  <Route path={`${process.env.PUBLIC_URL + "/blogs"}`} element={<BlogGrid/>} />
                   <Route path={`${process.env.PUBLIC_URL + "/blog-classic"}`} element={<BlogClassic/>} />
                   <Route path={`${process.env.PUBLIC_URL + "/tag/:slug"}`} element={<BlogTag/>} />
                   <Route path={`${process.env.PUBLIC_URL + "/category/:slug"}`} element={<BlogCategories/>} />
-                  <Route path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`}element={<BlogDetails/>} />
+                  <Route path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`}element={<BlogDetailsContainer/>} />
+                  <Route path={`${process.env.PUBLIC_URL + "/blog/:slug"}`}element={<BlogDetails/>} />
                   <Route path={`${process.env.PUBLIC_URL + "/it-infrastructure"}`}element={<ItInfraStructure/>} />
                   <Route path={`${process.env.PUBLIC_URL + "/enterprise-solutions"}`}element={<EnterPriseSolutions/>} />
                   <Route path={`${process.env.PUBLIC_URL + "/rental-services"}`}element={<RentalServices/>} />

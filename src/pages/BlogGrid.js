@@ -11,11 +11,11 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 const BlogGrid = () => {
     return (
         <React.Fragment>
-            <SEO title="Exomac || Blog" />
+            <SEO title="Gigahertz || Blogs" />
             <Header />
             <Breadcrumb 
                 image="images/bg/breadcrumb-bg-four.jpg"
-                title="Find all our latest news, insights, and events"
+                title="Blogs"
                 content="Home"
                 contentTwo="Blog"
             />
