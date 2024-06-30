@@ -62,6 +62,6 @@ export const MainHeading = {
     fontSize:'18px',
     fontWeight:600,
     borderRadius:'30px',
-    width:"60%",
+    width:"100%",
     mt:3
   }

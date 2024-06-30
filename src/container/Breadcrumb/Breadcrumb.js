@@ -36,7 +36,8 @@ Breadcrumb.propTypes = {
     title: PropTypes.string,
     content: PropTypes.string,
     contentTwo: PropTypes.string,
-    image: PropTypes.string
+    image: PropTypes.string,
+    bannerImage:PropTypes.string
 };
 
 export default Breadcrumb;

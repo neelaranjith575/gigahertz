@@ -1,6 +1,7 @@
 import { Grid, Box, Typography, Button, Stack } from "@mui/material";
 import Assesment from "../../assets/images/services/Assesments.png";
 import Health from "../../assets/images/services/Healthcheck.png";
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -81,6 +82,7 @@ const ServiceCard = ({ service, reverse }) => (
         >
           {service.description}
         </Typography>
+        <Link to="/contact">
         <Button
           variant="contained"
           sx={{
@@ -96,6 +98,7 @@ const ServiceCard = ({ service, reverse }) => (
         >
           Know More
         </Button>
+        </Link>
       </Stack>
     </Grid>
   </Grid>

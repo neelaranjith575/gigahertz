@@ -14,6 +14,7 @@ import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import BadgeOutlinedIcon from "@mui/icons-material/BadgeOutlined";
 import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 import Bgimage from "../../assets/images/hero-image/bg1.png"
+import { Link } from 'react-router-dom';
 
 
 
@@ -110,9 +111,11 @@ const HomeBanner = () => {
               Schedule a call with our industry expert and talk about your
               requirements and the ways in which we can offer you assistance
             </Typography>
+            <Link to="/contact">
             <Button variant="contained" sx={Buttonstyles} size="large">
               Contact Us
             </Button>
+            </Link>
           </Grid>
         </Grid>
       </Box>

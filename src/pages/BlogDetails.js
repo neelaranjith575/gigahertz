@@ -13,12 +13,13 @@ const BlogDetails = () => {
     let {id} = useParams();
     const blogId = parseInt(id, 10)
     const data = BlogClassicData.filter(blog => blog.id === blogId);
+    console.log(data,"data")
     return (
         <React.Fragment>
             <SEO title="Exomac || Blog Details" />
             <Header />
             <Breadcrumb 
-                image="images/bg/breadcrumb-bg-four.jpg"
+                image={data[0]?.Banner_Image}
                 title={data[0]?.title}
                 content="Home"
                 contentTwo="Blog Classic"

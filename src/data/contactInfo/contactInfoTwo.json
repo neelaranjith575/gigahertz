@@ -6,13 +6,19 @@
     "info": "Gigahertz Computing India Pvt Ltd  #716, 2nd Floor, 3rd Main, 9th Cross, Dr. Modi Hospital Road, Next to Ganesh temple,West of Chord Road, Rajajinagar, Bengaluru, Karnataka-560086"
     },
     {
-    "id": "2",
+        "id": "2",
+        "icon": "images/svg/linea/linea-basic-map.svg",
+        "title": "Assembly Unit",
+        "info": "Gigahertz Computing India Pvt Ltd D38, 4th A Main, Rajajinagar Industrial Estate, Bangalore - 560010"
+        },
+    {
+    "id": "3",
     "icon": "images/svg/linea/linea-basic-message-txt.svg",
     "title": "Phone number",
     "info": "+91 80 41287587/88, 23117276"
     },
     {
-    "id": "3",
+    "id": "4",
     "icon": "images/svg/linea/linea-basic-mail-open-text.svg",
     "title": "Email",
     "info": "gigahertz.hr@gigahertzcomp.com <br> reachus@gigahertzcomp.com"

@@ -13,19 +13,19 @@ const RentalServices = () => {
 
 
     const mainContent = [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante in nibh mauris cursus mattis molestie. Nulla aliquet enim tortor at auctor. Morbi enim nunc faucibus a pellentesque sit. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Sit amet consectetur adipiscing elit duis tristique. Lectus magna fringilla urna porttitor rhoncus dolor purus. Egestas purus viverra accumsan in nisl nisi. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante in nibh mauris cursus mattis molestie. Nulla aliquet enim tortor at auctor. Morbi enim nunc faucibus a pellentesque sit. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Sit amet consectetur adipiscing elit duis tristique. Lectus magna fringilla urna porttitor rhoncus dolor purus. Egestas purus viverra accumsan in nisl nisi. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus."
+        "Gigahertz Computing stands as your premier partner for comprehensive rental services tailored to meet the diverse technology needs of enterprises. Whether you require computers, audio-visual equipment, office tools, or robust wireless and internet solutions, we have you covered. Our commitment to excellence lies in our ability to source the latest and most cutting-edge technology, ensuring that your short-term or long-term rental requirements are not just met but exceeded.",
+        "In today's rapidly evolving business landscape, having access to the right technology is crucial for maintaining productivity, efficiency, and competitiveness. Gigahertz takes pride in offering a wide range of rental options, allowing enterprises to access top-of-the-line equipment without the burden of long-term commitments or hefty upfront costs. Whether you're hosting a large-scale event, setting up a temporary workspace, or simply need to augment your existing infrastructure, our rental services provide the flexibility and scalability you need to succeed. Our rental inventory includes the latest models of computers, laptops, and tablets, as well as audio-visual equipment like projectors, screens, and sound systems, plus office tools such as printers and scanners."
     ];
 
     const sideContent = [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante in nibh mauris cursus mattis molestie. Nulla aliquet enim tortor at auctor. Morbi enim nunc faucibus a pellentesque sit. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Sit amet consectetur adipiscing elit duis tristique. Lectus magna fringilla urna porttitor rhoncus dolor purus. Egestas purus viverra accumsan in nisl nisi. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus.",
+        "What sets us apart is our unwavering dedication to customer satisfaction and service excellence. Our team of experts works closely with you to understand your unique requirements and recommend the best rental solutions to meet them. We handle everything from delivery and setup to technical support and maintenance, ensuring a seamless and hassle-free experience. Additionally, we constantly update our rental inventory to offer the latest and most innovative solutions available, helping your business stay ahead of the curve. With competitive pricing and customizable rental packages, Gigahertz Computing is your trusted partner in navigating the complexities of modern technology, ensuring your business thrives in today’s competitive landscape.",
     ]
 
     const solutions = [
-        "Volutpat maecenas volutpat blandit aliquam",
-        "Volutpat maecenas volutpat blandit aliquam",
-        "Volutpat maecenas volutpat blandit aliquam",
-        "Volutpat maecenas volutpat blandit aliquam"
+        "Flexible hardware leasing options for scalable IT needs.",
+        "Short-term and long-term rental agreements to fit project timelines.",
+        "Comprehensive maintenance and support included with rentals.",
+        "Cost-effective solutions for temporary or fluctuating IT requirements."
     ];
 
     const buttons = [

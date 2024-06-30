@@ -39,22 +39,29 @@ const MobileNavMenu = () => {
     return (
         <nav className="site-mobile-menu">
             <ul>
-                <li className="has-children">
-                    <NavLink to={process.env.PUBLIC_URL + "/"}><span className="menu-text">Homepage</span></NavLink>
-                    <span className="menu-toggle" onClick={onClickHandler}><i className="icon fa fa-angle-down"></i></span>
+                <li >
+                    <NavLink to={process.env.PUBLIC_URL + "/"}><span className="menu-text">HOME</span></NavLink>
+                    {/* <span className="menu-toggle" onClick={onClickHandler}><i className="icon fa fa-angle-down"></i></span>
                     <ul className="sub-menu">
-                        <li><NavLink to={process.env.PUBLIC_URL + "/home-one"}><span className="menu-text">Home One</span></NavLink></li>
+                        <li><NavLink to={process.env.PUBLIC_URL + "/home"}><span className="menu-text">Home</span></NavLink></li>
                         <li><NavLink to={process.env.PUBLIC_URL + "/home-two"}><span className="menu-text">Home Two</span></NavLink></li>
                         <li><NavLink to={process.env.PUBLIC_URL + "/home-three"}><span className="menu-text">Home Three</span></NavLink></li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/about"}><span className="menu-text">About Us</span></NavLink>
-                </li>
-                <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/service"}><span className="menu-text">Services</span></NavLink>
+                    <NavLink to={process.env.PUBLIC_URL + "/about"}><span className="menu-text">ABOUT US</span></NavLink>
                 </li>
                 <li className="has-children">
+                    <NavLink to={process.env.PUBLIC_URL + "/"}><span className="menu-text">PRODUCT & SERVICES </span></NavLink>
+                    <span className="menu-toggle"><i className="far fa-angle-down"></i></span>
+                    <ul className="sub-menu">
+                        <li><NavLink to={process.env.PUBLIC_URL + "/it-infrastructure"}><span className="menu-text">IT INFRASTRUCTURE</span></NavLink></li>
+                        <li><NavLink to={process.env.PUBLIC_URL + "/enterprise-solutions"}><span className="menu-text">ENTERPRISE SOLUTIONS</span></NavLink></li>
+                        <li><NavLink to={process.env.PUBLIC_URL + "/rental-services"}><span className="menu-text">RENTAL SERVICES</span></NavLink></li>
+                        <li><NavLink to={process.env.PUBLIC_URL + "/managed-services"}><span className="menu-text">MANAGED SERVICES</span></NavLink></li>
+                    </ul>
+                </li>
+                {/* <li className="has-children">
                     <NavLink to={process.env.PUBLIC_URL + "/work"}><span className="menu-text">Work</span></NavLink>
                     <span className="menu-toggle" onClick={onClickHandler}><i className="far fa-angle-down"></i></span>
                     <ul className="sub-menu">
@@ -70,9 +77,15 @@ const MobileNavMenu = () => {
                         <li><NavLink to={process.env.PUBLIC_URL + "/blog-classic"}><span className="menu-text">Blog Classic</span></NavLink></li>
                         <li><NavLink to={process.env.PUBLIC_URL + `/blog-details/1`}><span className="menu-text">Blog Details</span></NavLink></li>
                     </ul>
+                </li> */}
+                <li>
+                    <NavLink to={process.env.PUBLIC_URL + "/careers"}><span className="menu-text">CAREERS</span></NavLink>
                 </li>
                 <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/contact"}><span className="menu-text">Contact Us</span></NavLink>
+                    <NavLink to={process.env.PUBLIC_URL + "/blogs"}><span className="menu-text">BLOGS</span></NavLink>
+                </li>
+                <li>
+                    <NavLink to={process.env.PUBLIC_URL + "/contact"}><span className="menu-text">CONTACT US</span></NavLink>
                 </li>
             </ul>
         </nav>

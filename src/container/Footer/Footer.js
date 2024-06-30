@@ -35,13 +35,14 @@ const Footer = () => {
                             return(
                                 <div key={key} className="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 mb-6">
                                     <div className="footer-social-inline">
-                                    <a href="#" style={{color:'white', fontFamily:'Inter'}}>HOME</a>
-                                    <a href="#"style={{color:'white', fontFamily:'Inter'}}>ABOUT US</a>
-                                    <a href="#"style={{color:'white',fontFamily:'Inter'}}>PRODUCTS & SERVICES</a>
+                                    <a href="/" style={{color:'white', fontFamily:'Inter'}}>HOME</a>
+                                    <a href="/about"style={{color:'white', fontFamily:'Inter'}}>ABOUT US</a>
+                                    {/* <a href="#"style={{color:'white',fontFamily:'Inter'}}>PRODUCTS & SERVICES</a>
                                     <a href="#"style={{color:'white', fontFamily:'Inter'}}>SUPPORT</a>
-                                    <a href="#"style={{color:'white', fontFamily:'Inter'}}>RESOURCES</a>
-                                    <a href="#"style={{color:'white', fontFamily:'Inter'}}>CAREERS</a>
-                                    <a href="#"style={{color:'white', fontFamily:'Inter'}}>CONTACT US</a>
+                                    <a href="#"style={{color:'white', fontFamily:'Inter'}}>RESOURCES</a> */}
+                                    <a href="/blogs"style={{color:'white', fontFamily:'Inter'}}>BLOGS</a>
+                                    <a href="/careers"style={{color:'white', fontFamily:'Inter'}}>CAREERS</a>
+                                    <a href="/contact"style={{color:'white', fontFamily:'Inter'}}>CONTACT US</a>
                                     
 
                                     </div>

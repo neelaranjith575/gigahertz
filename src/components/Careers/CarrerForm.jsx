@@ -1,15 +1,31 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { contactDetails } from '../../api/contact';
+import { careerDetails } from '../../api/careers';
+import { useSnackbar } from "notistack";
 
-const ContactForm = () => {
+const CareerForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm({
         mode: "onBlur"
     });
 
+    const { enqueueSnackbar } = useSnackbar();
+
     const onSubmit = async (data) => {
-        await contactDetails(data.name, data.phone, data.email, data.subject, data.message);
+        try {
+            await careerDetails(data.name, data.phone, data.email, data.jobName, data.message, data.resume[0]);
+            if (data.status === 200) {
+                enqueueSnackbar("Details Sent Successfully", { variant: "success",});
+                // navigate("/explore-communities");
+            }
+          
+        } catch (error) {
+            console.error('Submission error:', error);
+            enqueueSnackbar("Details Failed to Sent", {
+                variant: "success",
+              });
+        }
     };
+    
 
     return (
         <div className="contact-form" data-aos="fade-up" data-aos-delay="300">
@@ -59,13 +75,13 @@ const ContactForm = () => {
                     <div className="col-md-12 col-12 mb-6">
                         <input 
                             type="text" 
-                            placeholder="Subject *" 
-                            name="subject" 
-                            {...register("subject", {
-                                required: "Subject is required",
+                            placeholder="Job Name *" 
+                            name="jobName" 
+                            {...register("jobName", {
+                                required: "Job Name is required",
                             })}
                         />
-                        {errors?.subject && <p>{errors.subject?.message}</p>}
+                        {errors?.jobName && <p>{errors.jobName?.message}</p>}
                     </div>
                     <div className="col-12 mb-6">
                         <textarea 
@@ -77,13 +93,23 @@ const ContactForm = () => {
                         ></textarea>
                         {errors?.message && <p>{errors.message?.message}</p>}
                     </div>
+                    <div className="col-md-12 col-12 mb-6">
+                        <input 
+                            type="file" 
+                            name="resume" 
+                            {...register("resume", {
+                                required: "Resume is required",
+                            })}
+                        />
+                        {errors?.resume && <p>{errors.resume?.message}</p>}
+                    </div>
                     <div className="col-12 text-center mb-6">
                         <button type="submit" className="btn btn-primary btn-hover-secondary">Submit</button>
                     </div>
                 </div>
             </form>
         </div>
-    )
-}
+    );
+};
 
-export default ContactForm;
+export default CareerForm;

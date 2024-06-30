@@ -81,7 +81,7 @@ const ServiceContentPage = ({ title, bannerImage, mainContent, solutions, button
       <div className="section section-padding fix">
         <div className="container">
           <div className="row mb-n10">
-            <div className="col-lg-8 col-12 order-lg-1 mb-5">
+            <div className="col-lg-8 col-12 order-lg-1 mb-1">
               <div className="blog-3 blog-details col" data-aos="fade-up">
                 <div className="thumbnail">
                   <img className="w-100" src={`${process.env.PUBLIC_URL}/images/pagination/1.png`} alt="Blog Image" />
@@ -102,7 +102,7 @@ const ServiceContentPage = ({ title, bannerImage, mainContent, solutions, button
                 ))}
               </div>
             </div>
-            <div className="col-lg-4 col-12 order-lg-2 mb-10">
+            <div className="col-lg-4 col-12 order-lg-2 mb-1" data-aos="fade-up">
               <h1 className='title' style={{
                 fontSize: 24,
                 fontWeight: 700,
@@ -116,7 +116,7 @@ const ServiceContentPage = ({ title, bannerImage, mainContent, solutions, button
                 {solutions.map((solution, index) => (
                   <ListItem key={index}>
                     <ListItemIcon>
-                      <CheckBoxOutlinedIcon sx={{ color: 'black' }} />
+                      <CheckBoxOutlinedIcon sx={{ color: '#116FC6' }} />
                     </ListItemIcon>
                     <ListItemText
                       primary={solution}

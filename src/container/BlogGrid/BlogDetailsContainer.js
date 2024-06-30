@@ -17,6 +17,7 @@ import Footer from '../Footer/Footer.js';
 import { fetchBlogDetails } from '../../api/blogs.js';
 import { IMAGE_URL } from '../../configuration/url.config.js';
 
+
 const BlogDetailsContainer = ({ initialData }) => {
     const [blog, setBlog] = useState(initialData || null);
     const [loading, setLoading] = useState(true);
@@ -52,15 +53,15 @@ const BlogDetailsContainer = ({ initialData }) => {
     }
 
 
-    const imageUrl = `${IMAGE_URL}${blog?.attributes?.ThumbImage?.data?.attributes?.url}`;
-    console.log(imageUrl, "imageUrl")
+    const BannerimageUrl = `${IMAGE_URL}${blog?.attributes?.Banner_Image?.data?.attributes?.url}`;
+    console.log(BannerimageUrl, "imageUrl")
 
     return (
         <React.Fragment>
             <SEO title={`Gigahertz || ${blog?.attributes?.Title}`} />
             <Header />
             <Breadcrumb
-                image={imageUrl}
+                bannerImage={BannerimageUrl}
                 title={blog?.attributes?.Title}
                 content="Home"
                 contentTwo="Blog Details"
@@ -84,7 +85,8 @@ const BlogDetailsContainer = ({ initialData }) => {
                                     <SidebarCategories />
                                 </SidebarWidget> */}
                                 <SidebarWidget>
-                                    <h1 style={{fontFamily:'Inter'}}>Latest Posts</h1>
+                                    <h1 className='text' style={{fontFamily:'Inter', }}>LATEST POSTS</h1>
+                                    <hr></hr>
                                     <SidebarTitle classOption="mb-2" title="" />
                                     <SidebarPost />
                                 </SidebarWidget>
@@ -117,6 +119,11 @@ BlogDetailsContainer.propTypes = {
             Short_Description: PropTypes.string.isRequired,
             publishedAt: PropTypes.string.isRequired,
             imageUrl:PropTypes.string.isRequired,
+            Author:PropTypes.string.isRequired,
+            Author_Description:PropTypes.string.isRequired,
+            Banner_Image:PropTypes.string.isRequired,
+            Images:PropTypes.string.isRequired,
+
         }),
     }),
 };

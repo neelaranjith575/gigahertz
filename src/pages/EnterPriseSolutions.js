@@ -13,19 +13,19 @@ const EnterPriseSolutions = () => {
 
 
     const mainContent = [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante in nibh mauris cursus mattis molestie. Nulla aliquet enim tortor at auctor. Morbi enim nunc faucibus a pellentesque sit. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Sit amet consectetur adipiscing elit duis tristique. Lectus magna fringilla urna porttitor rhoncus dolor purus. Egestas purus viverra accumsan in nisl nisi. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante in nibh mauris cursus mattis molestie. Nulla aliquet enim tortor at auctor. Morbi enim nunc faucibus a pellentesque sit. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Sit amet consectetur adipiscing elit duis tristique. Lectus magna fringilla urna porttitor rhoncus dolor purus. Egestas purus viverra accumsan in nisl nisi. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus."
+        "We specialize in delivering comprehensive enterprise solutions designed to optimize your business's hardware infrastructure. Our expertise allows us to evaluate your current setup and recommend advanced configurations that align with your specific requirements and budget. By focusing on maximizing efficiency, performance, and cost-effectiveness, we ensure that your hardware investments yield the highest possible returns.",
+        "Our process begins with a thorough assessment of your existing infrastructure, analyzing performance, capacity, and utilization to identify bottlenecks or inefficiencies. Based on this detailed evaluation, we recommend suitable configurations that enhance operational capabilities while staying within budget. We also provide expert guidance on migrations, server consolidation, and other aspects of infrastructure management, ensuring seamless transitions with minimal disruption to your business operations."
     ];
 
     const sideContent = [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante in nibh mauris cursus mattis molestie. Nulla aliquet enim tortor at auctor. Morbi enim nunc faucibus a pellentesque sit. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Sit amet consectetur adipiscing elit duis tristique. Lectus magna fringilla urna porttitor rhoncus dolor purus. Egestas purus viverra accumsan in nisl nisi. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus.",
+        "What sets us apart is our commitment to personalized service and attention to detail. We develop tailored solutions that address your unique needs, providing end-to-end support from initial consultation to implementation and ongoing management. By leveraging cutting-edge technologies and proven methodologies, we help future-proof your infrastructure and position your business for long-term success. Partnering with us means gaining access to a wealth of knowledge and expertise, empowering your organization to thrive in a competitive market.",
     ]
 
     const solutions = [
-        "Volutpat maecenas volutpat blandit aliquam",
-        "Volutpat maecenas volutpat blandit aliquam",
-        "Volutpat maecenas volutpat blandit aliquam",
-        "Volutpat maecenas volutpat blandit aliquam"
+        "Comprehensive network architecture for scalable connectivity.",
+        "Robust cybersecurity measures for data protection.",
+        "Advanced virtualization and cloud integration for flexibility.",
+        "Centralized monitoring and management for operational efficiency."
     ];
 
     const buttons = [
