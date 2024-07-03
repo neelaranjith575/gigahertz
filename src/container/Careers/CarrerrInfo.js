@@ -1,11 +1,53 @@
-import React from 'react';
-import { useEffect, useRef } from "react";
+import { useParams } from "react-router-dom";
+import { fetchCareersDetails } from "../../api/careers";
+import React, { useEffect, useState, useRef } from "react";
+import PropTypes from "prop-types";
 import Parallax from 'parallax-js';
 import CareersDetails from '../../components/Careers/CareersDetail.jsx';
 import CareerForm from '../../components/Careers/CarrerForm.jsx';
 import SectionTitle from "../../components/SectionTitles/SectionTitle.jsx"
 
-const CareerInfo = () => {
+const CareerInfo = (initialData) => {
+
+
+    const [career, setCareer] = useState(initialData || null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const { id } = useParams();
+
+    useEffect(() => {
+        const getCareersDetails = async () => {
+            try {
+                const data = await fetchCareersDetails(id);
+                console.log(data, "data");
+                setCareer(data?.data || null);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        if (!initialData && id) {
+            getCareersDetails();
+        } else {
+            setLoading(false);
+        }
+    }, [id, initialData]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    if (!career) {
+        return <div>No blog found</div>;
+    }
+
+
     const sceneEl = useRef(null);
 
     useEffect(() => {
@@ -31,7 +73,7 @@ const CareerInfo = () => {
                             </h3>
                         </div>
                         <div className="contact-Information me-xl-7">
-                            <CareersDetails />
+                            <CareersDetails data={initialData} />
                         </div>
                     </div>
                     <div className="col mt-lg-0 mt-md-10 mt-8" data-aos="fade-up">
@@ -74,5 +116,16 @@ const CareerInfo = () => {
         </div>
     )
 }
+
+CareerInfo.propTypes = {
+    initialData: PropTypes.shape({
+        attributes: PropTypes.shape({
+            PostBy: PropTypes.string.isRequired,
+            jobTitle: PropTypes.string.isRequired,
+
+
+        }),
+    }),
+};
 
 export default CareerInfo

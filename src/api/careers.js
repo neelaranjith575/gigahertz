@@ -40,31 +40,31 @@ export const careerDetails = async (name, phone, email, jobName, message, resume
         });
 
         console.log('Success:', response.data);
-        
+
     } catch (error) {
         console.error('Error:', error);
     }
 };
 
 
-export const createCareer = async (name, phone, email, image) => {
+// export const createCareer = async (name, phone, email, image) => {
 
-    try {
+//     try {
 
-        const sendData = new FormData();
-        sendData.append('data', JSON.stringify({ name, phone, email }));
-        sendData.append('file.image', image[0]);
-        const response = await axios.post(`${BASE_URL}/careerforms`, sendData
-            , {
-                headers: {
-                    "Content-Type": "multipart/form-data"
-            }
-        }
-        );
-        console.log(response, "response")
-        
-    } catch (error) {
-        console.error("Error", error)
-        
-    }
-}
+//         const sendData = new FormData();
+//         sendData.append('data', JSON.stringify({ name, phone, email }));
+//         sendData.append('file.image', image[0]);
+//         const response = await axios.post(`${BASE_URL}/careerforms`, sendData
+//             , {
+//                 headers: {
+//                     "Content-Type": "multipart/form-data"
+//                 }
+//             }
+//         );
+//         console.log(response, "response")
+
+//     } catch (error) {
+//         console.error("Error", error)
+
+//     }
+// }

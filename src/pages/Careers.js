@@ -12,14 +12,14 @@ const Careers = () => {
         <React.Fragment>
             <SEO title="Gigahertz || Careers" />
             <Header />
-            <Breadcrumb 
-                bannerImage="images/bg/breadcrumb-bg.jpg"
+            <Breadcrumb
+                bannerImage="images/bg/6.png"
                 title="Careers"
                 content="Home"
                 contentTwo="Careers"
             />
             <PageCareerList />
-          
+
             <Footer />
             <ScrollToTop />
         </React.Fragment>

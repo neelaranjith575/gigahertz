@@ -5,8 +5,8 @@ import BlogDetails from '../../components/Blog/BlogDetails.jsx';
 import SidebarWrap from '../../components/Sidebar/SidebarWrap.jsx';
 import SidebarWidget from '../../components/Sidebar/SidebarWidget.jsx';
 import SidebarTitle from '../../components/Sidebar/SidebarTitle';
-import SidebarSearch from '../../components/Sidebar/SidebarSearch.jsx';
-import SidebarCategories from '../../components/Sidebar/SidebarCategories.jsx';
+// import SidebarSearch from '../../components/Sidebar/SidebarSearch.jsx';
+// import SidebarCategories from '../../components/Sidebar/SidebarCategories.jsx';
 import SidebarPost from '../../components/Sidebar/SidebarPost.jsx';
 import SEO from '../../components/SEO.jsx';
 import Header from '../../partials/header/Header.jsx';
@@ -54,7 +54,7 @@ const BlogDetailsContainer = ({ initialData }) => {
 
 
     const BannerimageUrl = `${IMAGE_URL}${blog?.attributes?.Banner_Image?.data?.attributes?.url}`;
-    console.log(BannerimageUrl, "imageUrl")
+    // console.log(BannerimageUrl, "imageUrl")
 
     return (
         <React.Fragment>
@@ -85,7 +85,7 @@ const BlogDetailsContainer = ({ initialData }) => {
                                     <SidebarCategories />
                                 </SidebarWidget> */}
                                 <SidebarWidget>
-                                    <h1 className='text' style={{fontFamily:'Inter', }}>LATEST POSTS</h1>
+                                    <h1 className='text' style={{ fontFamily: 'Inter', }}>LATEST POSTS</h1>
                                     <hr></hr>
                                     <SidebarTitle classOption="mb-2" title="" />
                                     <SidebarPost />
@@ -118,11 +118,11 @@ BlogDetailsContainer.propTypes = {
             Long_Description: PropTypes.string.isRequired,
             Short_Description: PropTypes.string.isRequired,
             publishedAt: PropTypes.string.isRequired,
-            imageUrl:PropTypes.string.isRequired,
-            Author:PropTypes.string.isRequired,
-            Author_Description:PropTypes.string.isRequired,
-            Banner_Image:PropTypes.string.isRequired,
-            Images:PropTypes.string.isRequired,
+            imageUrl: PropTypes.string.isRequired,
+            Author: PropTypes.string.isRequired,
+            Author_Description: PropTypes.string.isRequired,
+            Banner_Image: PropTypes.string.isRequired,
+            Images: PropTypes.string.isRequired,
 
         }),
     }),

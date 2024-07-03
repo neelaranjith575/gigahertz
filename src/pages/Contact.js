@@ -12,8 +12,8 @@ const Contact = () => {
         <React.Fragment>
             <SEO title="Gigahertz || Contact Us" />
             <Header />
-            <Breadcrumb 
-                bannerImage="images/bg/breadcrumb-bg.jpg"
+            <Breadcrumb
+                bannerImage="images/bg/7.png"
                 title="Contact Us"
                 content="Home"
                 contentTwo="Contact Us"

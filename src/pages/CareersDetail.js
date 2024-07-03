@@ -14,7 +14,7 @@ const careerDetail = () => {
         <React.Fragment>
             <SEO title="Gigahertz || Careers Details" />
             <Header />
-            <Breadcrumb 
+            <Breadcrumb
                 bannerImage="images/bg/breadcrumb-bg.jpg"
                 title="Contact Us"
                 content="Home"

@@ -1,15 +1,12 @@
 import { Stack, Grid, Box, Typography } from "@mui/material";
 import Service1 from "../../assets/images/services/1.png";
+import Service2 from "../../assets/images/services/2.png";
 import Service3 from "../../assets/images/services/3.png";
 import Service4 from "../../assets/images/services/4.png";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const HomeServices = () => {
-
   const navigate = useNavigate();
-
-
-  
 
   const handleButtonClick = (url) => {
     navigate(url);
@@ -38,20 +35,35 @@ const HomeServices = () => {
                 solutions for outsourcing the daily management of your IT tasks
                 and functions.
               </p>
-              <Stack sx={{mt:5}}>
-                <Grid container data-aos="fade-up" spacing={{xs:1,md:0}}>
+              <Stack sx={{ mt: 5 }}>
+                <Grid container data-aos="fade-up" spacing={{ xs: 1, md: 0 }}>
                   {[
-                    { src: Service1, label: "IT INFRASTRUCTURE", url:"/it-infrastructure" },
-                    { src: Service3, label: "ENTERPRISE SOLUTIONS", url:'enterprise-solutions' },
-                    { src: Service4, label: "RENTAL SERVICES", url:'/rental-services' },
-                    { src: Service1, label: "MANAGED SERVICES", url:'/managed-services' },
+                    {
+                      src: Service1,
+                      label: "IT INFRASTRUCTURE",
+                      url: "/it-infrastructure",
+                    },
+                    {
+                      src: Service2,
+                      label: "ENTERPRISE SOLUTIONS",
+                      url: "enterprise-solutions",
+                    },
+                    {
+                      src: Service3,
+                      label: "RENTAL SERVICES",
+                      url: "/rental-services",
+                    },
+                    {
+                      src: Service4,
+                      label: "MANAGED SERVICES",
+                      url: "/managed-services",
+                    },
                   ].map((item, index) => (
                     <Grid item xs={6} md={3} key={index}>
                       <Box
                         position="relative"
                         textAlign="center"
                         sx={{
-                          
                           "&:hover img": {
                             transform: "scale(0.95)",
                             borderRadius: "40px 40px 0px 0px",
@@ -68,13 +80,12 @@ const HomeServices = () => {
                           src={item.src}
                           alt={item.label}
                           onClick={() => handleButtonClick(item.url)}
-                          
                           sx={{
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
                             transition: "transform 0.3s ease-in-out",
-                            cursor:'pointer'
+                            cursor: "pointer",
                           }}
                         />
                         <Typography
@@ -84,18 +95,19 @@ const HomeServices = () => {
                           transform="translate(-50%, -50%)"
                           color="#17222E"
                           bgcolor="#FFFFFF99"
-                          width="100%" 
+                          width="100%"
                           textAlign="center"
                           fontFamily="Bebas Neue"
                           borderRadius="30px"
                           padding="8px"
                           className="heading"
-                          
                           sx={{
-                            fontSize:{xs:'25px', md:'50px',
+                            fontSize: {
+                              xs: "25px",
+                              md: "50px",
                               transition: "transform 0.3s ease-in-out",
-                               cursor:'pointer'
-                            }
+                              cursor: "pointer",
+                            },
                           }}
                           onClick={() => handleButtonClick(item.url)}
                         >

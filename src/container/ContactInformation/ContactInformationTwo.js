@@ -1,5 +1,5 @@
 import React from 'react';
-import {useEffect, useRef} from "react";
+import { useEffect, useRef } from "react";
 import contactDataTwo from '../../data/contactInfo/contactInfoTwo.json';
 import ContactInfoItem from '../../components/ContactInfo/ContactInfoItemTwo.jsx';
 import Parallax from 'parallax-js';
@@ -10,9 +10,9 @@ const ContactInformationTwo = () => {
 
     useEffect(() => {
         const parallaxInstance = new Parallax(sceneEl.current, {
-        relativeInput: true,
+            relativeInput: true,
         })
-        
+
         parallaxInstance.enable();
 
         return () => parallaxInstance.disable();
@@ -24,30 +24,30 @@ const ContactInformationTwo = () => {
             <div className="container">
                 <div className="row row-cols-lg-2 row-cols-1 align-items-center">
                     <div className="col" data-aos="fade-up">
-                    <div className="section-title-two mb-8">
-                                {/* <span className="sub-title">Development that converts and delivers</span> */}
-                                <h3 className="title" >
+                        <div className="section-title-two mb-8">
+                            {/* <span className="sub-title">Development that converts and delivers</span> */}
+                            <h3 className="title" >
                                 GET IN TOUCH
-                                </h3>
-                            </div>
+                            </h3>
+                        </div>
                         <div className="contact-Information me-xl-7">
-                            
+
 
                             {contactDataTwo && contactDataTwo.map((single, key) => {
-                                return(
+                                return (
                                     <React.Fragment key={key}>
                                         <ContactInfoItem classOption="ct-info-two" data={single} key={key} />
                                     </React.Fragment>
-                                ); 
+                                );
                             })}
                         </div>
                     </div>
-                    <div className="col mt-lg-0 mt-md-10 mt-8" data-aos="fade-up">
-                    <GoogleMap />
+                    <div className="col mt-lg-30 mt-md-10 mt-8" data-aos="fade-up">
+                        <GoogleMap />
                     </div>
-                    
+
                     <div className="col mt-lg-0 mt-md-10 mt-8" data-aos="fade-up">
-                
+
                         <div className="contact-form-area">
                             <div className="shape shape-1" id="scene" ref={sceneEl}>
                                 {/* <span data-depth="1">

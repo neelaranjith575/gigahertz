@@ -8,21 +8,25 @@ import {
   Content2,
   Buttonstyles,
 } from "./HomeBanner.styles";
-import BannerImage from "../../assets/images/banner/banner.png";
+import BannerImage from "../../assets/images/banner/BANNER2.png";
 import { List, ListItem, ListItemText, ListItemIcon } from "@mui/material";
 import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import BadgeOutlinedIcon from "@mui/icons-material/BadgeOutlined";
 import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
-import Bgimage from "../../assets/images/hero-image/bg1.png"
-import { Link } from 'react-router-dom';
-
-
-
+import Bgimage from "../../assets/images/hero-image/bg1.png";
+import { Link } from "react-router-dom";
 
 const HomeBanner = () => {
   return (
     <>
-      <Box sx={{backgroundImage: `url(${Bgimage})`, backgroundPosition:'center', backgroundSize:'cover', backgroundRepeat:'no-repeat',}}>
+      <Box
+        sx={{
+          backgroundImage: `url(${Bgimage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <Stack display={"flex"} alignItems={"center"}>
           <Typography sx={MainHeading}>
             A MODERN APPROACH TO <br></br>
@@ -46,50 +50,49 @@ const HomeBanner = () => {
               provide end to end support that streamline operations, enhance
               security and drive business growth.
             </Typography>
-            <Stack sx={{ ml: 5, mt:5 }}>
+            <Stack sx={{ ml: 5, mt: 5 }}>
               <List>
                 <ListItem>
                   <ListItemIcon>
-                    <VerifiedUserOutlinedIcon sx={{color:'black'}} />
+                    <VerifiedUserOutlinedIcon sx={{ color: "black" }} />
                   </ListItemIcon>
                   <ListItemText
                     primary="We are ISO certified"
                     primaryTypographyProps={{
-                        fontSize: 20,
-                        fontWeight: 500,
-                        fontFamily:'Inter',
-                        color:'#525252'
-
-                      }}
+                      fontSize: 20,
+                      fontWeight: 500,
+                      fontFamily: "Inter",
+                      color: "#525252",
+                    }}
                   />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <BadgeOutlinedIcon sx={{color:'black'}} />
+                    <BadgeOutlinedIcon sx={{ color: "black" }} />
                   </ListItemIcon>
-                  <ListItemText primary="25+ years of service" 
-                  primaryTypographyProps={{
-                    fontSize: 20,
-                    fontWeight: 500,
-                    fontFamily:'Inter',
-                    color:'#525252'
-
-                  }}
-                   />
+                  <ListItemText
+                    primary="25+ years of service"
+                    primaryTypographyProps={{
+                      fontSize: 20,
+                      fontWeight: 500,
+                      fontFamily: "Inter",
+                      color: "#525252",
+                    }}
+                  />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <SupportAgentOutlinedIcon sx={{color:'black'}}
-                     />
+                    <SupportAgentOutlinedIcon sx={{ color: "black" }} />
                   </ListItemIcon>
-                  <ListItemText primary="24/7 Customer support"
-                  primaryTypographyProps={{
-                    fontSize: 20,
-                    fontWeight: 500,
-                    fontFamily:'Inter',
-                    color:'#525252'
-
-                  }} />
+                  <ListItemText
+                    primary="24/7 Customer support"
+                    primaryTypographyProps={{
+                      fontSize: 20,
+                      fontWeight: 500,
+                      fontFamily: "Inter",
+                      color: "#525252",
+                    }}
+                  />
                 </ListItem>
               </List>
             </Stack>
@@ -112,9 +115,9 @@ const HomeBanner = () => {
               requirements and the ways in which we can offer you assistance
             </Typography>
             <Link to="/contact">
-            <Button variant="contained" sx={Buttonstyles} size="large">
-              Contact Us
-            </Button>
+              <Button variant="contained" sx={Buttonstyles} size="large">
+                Contact Us
+              </Button>
             </Link>
           </Grid>
         </Grid>

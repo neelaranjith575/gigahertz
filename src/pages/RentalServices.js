@@ -4,7 +4,7 @@ import Header from "../partials/header/Header.jsx";
 import CallToAction from '../container/CallToAction/CallToAction.js';
 import Footer from '../container/Footer/Footer.js';
 import ScrollToTop from '../components/ScrollToTop.jsx';
-import Banner from "../assets/images/services/S1.png";
+import Banner from "../assets/images/services/b4.png";
 import ServiceContentPage from '../container/Services/ServiceContentPage.js';
 
 
