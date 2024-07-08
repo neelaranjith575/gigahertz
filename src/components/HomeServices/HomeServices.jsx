@@ -36,7 +36,12 @@ const HomeServices = () => {
                 and functions.
               </p>
               <Stack sx={{ mt: 5 }}>
-                <Grid container data-aos="fade-up" spacing={{ xs: 1, md: 0 }}>
+                <Grid
+                  container
+                  data-aos="fade-up"
+                  spacing={{ xs: 1, md: 0 }}
+                  sx={{ p: { xs: 1, md: 0 } }}
+                >
                   {[
                     {
                       src: Service1,
@@ -103,7 +108,7 @@ const HomeServices = () => {
                           className="heading"
                           sx={{
                             fontSize: {
-                              xs: "25px",
+                              xs: "20px",
                               md: "50px",
                               transition: "transform 0.3s ease-in-out",
                               cursor: "pointer",

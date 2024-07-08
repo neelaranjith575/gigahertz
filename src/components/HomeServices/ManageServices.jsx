@@ -1,7 +1,7 @@
 import { Grid, Box, Typography, Button, Stack } from "@mui/material";
 import Assesment from "../../assets/images/services/Assesments.png";
 import Health from "../../assets/images/services/Healthcheck.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -53,7 +53,7 @@ const ServiceCard = ({ service, reverse }) => (
         justifyContent: "center",
       }}
     >
-      <Stack spacing={2} sx={{ml:6}}>
+      <Stack spacing={2} sx={{ ml: 6 }}>
         <Typography
           variant="h4"
           sx={{
@@ -80,24 +80,25 @@ const ServiceCard = ({ service, reverse }) => (
             mr: 5,
           }}
         >
-          {service.description}
+          {service?.description}
         </Typography>
         <Link to="/contact">
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: "#000000",
-            fontFamily: "Inter",
-            fontSize: "18px",
-            fontWeight: 600,
-            borderRadius: "30px",
-            width: "50%",
-            mt: 3,
-          }}
-          size="large"
-        >
-          Know More
-        </Button>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#000000",
+              fontFamily: "Inter",
+              fontSize: "18px",
+              fontWeight: 600,
+              borderRadius: "30px",
+              width: { xs: "80%", md: "50%" },
+              mt: 3,
+              mb: 3,
+            }}
+            size="large"
+          >
+            Know More
+          </Button>
         </Link>
       </Stack>
     </Grid>

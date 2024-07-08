@@ -95,10 +95,10 @@ const HomeSkillWithVideo = () => {
 
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up">
+                    <div className="col-xl-6 col-lg-6 col-" data-aos="fade-up">
                         <Stack
                             direction="row"
-                            sx={{ display: "flex", justifyContent: "space-between", mt: 5 }}
+                            sx={{ display: { xs: "none", md: "flex" }, justifyContent: "space-between", mt: 5 }}
                         >
                             <div className="section-title-two mb-8">
                                 <h3 className="title" style={{ lineHeight: "150px" }}>
@@ -107,11 +107,19 @@ const HomeSkillWithVideo = () => {
                                 <h3 className="title">WITH MOMENTUM</h3>
                             </div>
                         </Stack>
+                        <Stack
+                            direction="row"
+                            sx={{ display: { xs: "flex", md: "none" }, justifyContent: "center", mt: 5 }}
+                        >
+                            <div className="section-title-two mb-0">
+                                <h3 className="title">MOVING FORWARD{" "} WITH MOMENTUM</h3>
+                            </div>
+                        </Stack>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-12" data-aos="fade-up">
+                    <div className="col-xl-3 col-lg-3 col-6" data-aos="fade-up">
                         <Stack
                             direction="column"
-                            sx={{ display: "flex", justifyContent: "space-between", mt: 5 }}
+                            sx={{ display: "flex", justifyContent: "space-between", mt: { xs: 2, md: 5 } }}
                         >
                             <List
                                 sx={{
@@ -122,7 +130,7 @@ const HomeSkillWithVideo = () => {
                             >
                                 <ListItem>
                                     <SupportAgentIcon
-                                        sx={{ fontSize: "50px", color: "#116FC6", mt: 2, mr: 2 }}
+                                        sx={{ fontSize: { xs: "30px", md: "50px" }, color: "#116FC6", mt: 2, mr: 2 }}
                                     />
 
                                     <ListItemText
@@ -132,7 +140,7 @@ const HomeSkillWithVideo = () => {
                                             sx: {
                                                 fontFamily: "Inter",
                                                 color: "#111827",
-                                                fontSize: "45px",
+                                                fontSize: { xs: "25px", md: "45px" },
                                                 fontWeight: "700",
                                             },
                                         }}
@@ -140,16 +148,16 @@ const HomeSkillWithVideo = () => {
                                             sx: {
                                                 fontFamily: "Inter",
                                                 color: "#111827",
-                                                fontSize: "18px",
+                                                fontSize: { xs: "15px", md: "18px" },
                                                 fontWeight: "500",
-                                                mt: -2,
+                                                mt: { xs: 0.5, md: -2 },
                                             },
                                         }}
                                     />
                                 </ListItem>
                                 <ListItem>
                                     <VolunteerActivismOutlinedIcon
-                                        sx={{ fontSize: "50px", color: "#116FC6", mt: 2, mr: 2 }}
+                                        sx={{ fontSize: { xs: "30px", md: "50px" }, color: "#116FC6", mt: 2, mr: 2 }}
                                     />
 
                                     <ListItemText
@@ -159,7 +167,7 @@ const HomeSkillWithVideo = () => {
                                             sx: {
                                                 fontFamily: "Inter",
                                                 color: "#111827",
-                                                fontSize: "45px",
+                                                fontSize: { xs: "25px", md: "45px" },
                                                 fontWeight: "700",
                                             },
                                         }}
@@ -167,9 +175,9 @@ const HomeSkillWithVideo = () => {
                                             sx: {
                                                 fontFamily: "Inter",
                                                 color: "#111827",
-                                                fontSize: "18px",
+                                                fontSize: { xs: "15px", md: "18px" },
                                                 fontWeight: "500",
-                                                mt: -2,
+                                                mt: { xs: 0.5, md: -2 },
                                             },
                                         }}
                                     />
@@ -177,10 +185,10 @@ const HomeSkillWithVideo = () => {
                             </List>
                         </Stack>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-12" data-aos="fade-up">
+                    <div className="col-xl-3 col-lg-3 col-6" data-aos="fade-up">
                         <Stack
                             direction="column"
-                            sx={{ display: "flex", justifyContent: "space-between", mt: 5 }}
+                            sx={{ display: "flex", justifyContent: "space-between", mt: { xs: 2, md: 5 } }}
                         >
                             <List
                                 sx={{
@@ -191,7 +199,7 @@ const HomeSkillWithVideo = () => {
                             >
                                 <ListItem>
                                     <FactCheckOutlinedIcon
-                                        sx={{ fontSize: "50px", color: "#116FC6", mt: 2, mr: 2 }}
+                                        sx={{ fontSize: { xs: "30px", md: "50px" }, color: "#116FC6", mt: 2, mr: 2 }}
                                     />
 
                                     <ListItemText
@@ -201,7 +209,7 @@ const HomeSkillWithVideo = () => {
                                             sx: {
                                                 fontFamily: "Inter",
                                                 color: "#111827",
-                                                fontSize: "45px",
+                                                fontSize: { xs: "25px", md: "45px" },
                                                 fontWeight: "700",
                                             },
                                         }}
@@ -209,16 +217,16 @@ const HomeSkillWithVideo = () => {
                                             sx: {
                                                 fontFamily: "Inter",
                                                 color: "#111827",
-                                                fontSize: "18px",
+                                                fontSize: { xs: "13px", md: "18px" },
                                                 fontWeight: "500",
-                                                mt: -2,
+                                                mt: { xs: 0.5, md: -2 },
                                             },
                                         }}
                                     />
                                 </ListItem>
                                 <ListItem>
                                     <SupervisorAccountOutlinedIcon
-                                        sx={{ fontSize: "50px", color: "#116FC6", mt: 2, mr: 2 }}
+                                        sx={{ fontSize: { xs: "30px", md: "50px" }, color: "#116FC6", mt: 2, mr: 2 }}
                                     />
 
                                     <ListItemText
@@ -228,7 +236,7 @@ const HomeSkillWithVideo = () => {
                                             sx: {
                                                 fontFamily: "Inter",
                                                 color: "#111827",
-                                                fontSize: "45px",
+                                                fontSize: { xs: "25px", md: "45px" },
                                                 fontWeight: "700",
                                             },
                                         }}
@@ -236,9 +244,9 @@ const HomeSkillWithVideo = () => {
                                             sx: {
                                                 fontFamily: "Inter",
                                                 color: "#111827",
-                                                fontSize: "18px",
+                                                fontSize: { xs: "15px", md: "18px" },
                                                 fontWeight: "500",
-                                                mt: -2,
+                                                mt: { xs: 0.5, md: -2 },
                                             },
                                         }}
                                     />

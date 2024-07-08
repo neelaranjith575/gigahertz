@@ -23,6 +23,7 @@ const ManagedServices = lazy(() => import("./pages/ManagedServices"));
 const BlogCategories = lazy(() => import("./pages/BlogCategories"));
 const BlogTag = lazy(() => import("./pages/BlogTag"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Thankyou = lazy(() => import("./pages/Thankyou"));
 
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
             <Route path={`${process.env.PUBLIC_URL + "/rental-services"}`} element={<RentalServices />} />
             <Route path={`${process.env.PUBLIC_URL + "/managed-services"}`} element={<ManagedServices />} />
             <Route path={`${process.env.PUBLIC_URL + "/contact"}`} element={<Contact />} />
+            <Route path={`${process.env.PUBLIC_URL + "/thank-you"}`} element={<Thankyou />} />
           </Routes>
         </Suspense>
       </NavScrollTop>

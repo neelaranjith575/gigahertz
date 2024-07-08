@@ -4,7 +4,7 @@
 export const MainHeading = {
   color: '#116FC6',
   mt: 15,
-  fontSize: '120px',
+  fontSize: { xs: '50px', md: '120px' },
   textAlign: 'center',
   fontWeight: '400',
   fontFamily: "Bebas Neue",
@@ -13,8 +13,7 @@ export const MainHeading = {
 
 export const SubHeading = {
   color: '#116FC6',
-  mt: 5,
-  fontSize: '50px',
+  fontSize: { xs: '30px', md: '50px' },
   fontWeight: '400',
   fontFamily: "Bebas Neue",
   lineHeight: 1.2,
@@ -23,8 +22,8 @@ export const SubHeading = {
 
 export const SubHeading2 = {
   color: '#116FC6',
-  mt: 5,
-  fontSize: '38px',
+  mt: { xs: 1, md: 5 },
+  fontSize: { xs: '25px', md: '38px' },
   fontWeight: '400',
   fontFamily: "Bebas Neue",
   lineHeight: 1.2,

@@ -5,8 +5,6 @@ import NavBar from "../../components/NavBar/NavBar";
 import Btn from "../../components/Btn/Btn";
 import MobileMenu from "../../components/NavBar/MobileMenu";
 import MainSearch from "../../components/NavBar/MainSearch";
-import { Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -31,12 +29,6 @@ const Header = () => {
 
   const handleScroll = () => {
     setScroll(window.scrollY);
-  };
-
-  const navigate = useNavigate();
-
-  const raiseTicket = () => {
-    navigate("https://support.gigahertzcomp.com/portal");
   };
 
   return (
