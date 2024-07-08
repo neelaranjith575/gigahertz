@@ -5,6 +5,8 @@ import CallToAction from '../container/CallToAction/CallToAction';
 import Footer from '../container/Footer/Footer';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 import Banner from "../assets/images/services/b1.png"
+import ServiceImage1 from "../assets/images/services/ITB1 (1).jpg"
+import ServiceImage2 from "../assets/images/services/ITB1 (2).jpg"
 import ServiceContentPage from '../container/Services/ServiceContentPage';
 
 
@@ -34,6 +36,16 @@ const ItInfraStructure = () => {
         { label: "MANAGED SERVICES", url: "/managed-services" }
     ];
 
+    const mobileButtons = [
+        { label: "IT ", url: "/it-infrastructure" },
+        { label: "ENTERPRISE ", url: "/enterprise-solutions" },
+        { label: "RENTAL ", url: "/rental-services" },
+        { label: "MANAGED ", url: "/managed-services" }
+    ];
+
+    const serviceImage1 = ServiceImage1
+    const serviceImage2 = ServiceImage2
+
     return (
         <React.Fragment>
             <SEO title="Gigahertz || IT Infrastructure" />
@@ -45,6 +57,9 @@ const ItInfraStructure = () => {
                 solutions={solutions}
                 buttons={buttons}
                 sideContent={sideContent}
+                mobileButtons={mobileButtons}
+                serviceImage1={serviceImage1}
+                serviceImage2={serviceImage2}
             />
             <CallToAction />
             <Footer />

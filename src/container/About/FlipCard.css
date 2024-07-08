@@ -8,6 +8,13 @@
     display: inline-block;
     border-radius: 10px;
   }
+
+  @media (max-width: 600px) {
+    .flip-card {
+      width: 370px; /* Adjust width for mobile screens */
+      height: 370px;
+    }
+  }
   
   .flip-card-inner {
     position: relative;

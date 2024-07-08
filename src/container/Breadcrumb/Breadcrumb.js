@@ -1,24 +1,25 @@
 import PropTypes from "prop-types";
 import React from 'react';
+import { Stack } from "@mui/material";
 
 
-const Breadcrumb = ({title, bannerImage,}) => {
-    return (
-       <>
-       <div className="page-title-section section section-padding-top overlay-two" style={{
+const Breadcrumb = ({ title, bannerImage, }) => {
+  return (
+    <>
+      <Stack className="page-title-section section section-padding-top overlay-two" sx={{
         backgroundImage: `url(${bannerImage})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        height: '88vh'
-      }}></div>
-      <div className="page-title" style={{
+        height: { xs: '44vh', md: '88vh' },
+      }}></Stack>
+      <Stack className="page-title" style={{
         backgroundColor: '#ECF2F7',
         padding: '5px',
         justifyContent: 'center',
         alignContent: 'center'
       }}>
-        <div className="container">
+        <Stack className="container">
           <h1 className='text' style={{
             fontFamily: 'Bebas Neue',
             paddingTop: '35px',
@@ -26,18 +27,18 @@ const Breadcrumb = ({title, bannerImage,}) => {
             textAlign: 'center',
             marginTop: '-20px'
           }}>{title}</h1>
-        </div>
-      </div>
-       </>
-    )
+        </Stack>
+      </Stack>
+    </>
+  )
 }
 
 Breadcrumb.propTypes = {
-    title: PropTypes.string,
-    content: PropTypes.string,
-    contentTwo: PropTypes.string,
-    image: PropTypes.string,
-    bannerImage:PropTypes.string
+  title: PropTypes.string,
+  content: PropTypes.string,
+  contentTwo: PropTypes.string,
+  image: PropTypes.string,
+  bannerImage: PropTypes.string
 };
 
 export default Breadcrumb;

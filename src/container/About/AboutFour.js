@@ -102,33 +102,33 @@ const AboutFour = () => {
                     missionContent="Gigahertz is working towards expanding the businesses in the areas of Automation, Cloud Solutions, Resource Placements and Security solutions in alignment with the company’s goals and objectives. Company’s mission is to provide flawless integrated solutions to all our customers making it easy for them to implement, automate and secure it seamlessly."
                 />
 
-                <div>
+                <div className="container" >
                     <h3 style={{ fontFamily: 'Inter', fontSize: '35px', textAlign: 'center' }}>OUR CORE VALUES</h3>
                     <p style={{ color: '#525252', fontFamily: 'Inter', textAlign: 'center' }}>Gigahertz is built on four core values that inspire us to work together every day toward improving the world.</p>
                 </div>
 
 
-                <Grid container spacing={5} p={10}>
+                <Grid container spacing={{ xs: 0, md: 5 }} sx={{ p: { xs: 0, md: 10 } }}>
 
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <CoreValues
                             coreHeading="GROWTH AND EXPANSION"
                             coreContent='We’re obsessed with our customers’ success and take pride in their achievements.' />
 
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <CoreValues
                             coreHeading="PATIENCE AND TRUST"
                             coreContent='We communicate openly with our customers, and do what it takes to keep their data secure.' />
 
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <CoreValues
                             coreHeading="INNOVATION & EXECUTION"
                             coreContent='We pursue ideas that could change our company, our country — and maybe even the world.' />
 
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <CoreValues
                             coreHeading="UNITY IN DIVERSITY"
                             coreContent='We respect and value employees from every background, and we thrive as a result.' />
