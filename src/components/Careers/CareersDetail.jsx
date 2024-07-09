@@ -3,7 +3,7 @@ import { fetchCareersDetails } from "../../api/careers";
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-const CareersDetails = (data) => {
+const CareersDetails = ({ data }) => {
   const [career, setCareer] = useState(data || null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,9 +12,9 @@ const CareersDetails = (data) => {
   useEffect(() => {
     const getCareersDetails = async () => {
       try {
-        const data = await fetchCareersDetails(id);
-        console.log(data, "data");
-        setCareer(data?.data || null);
+        const result = await fetchCareersDetails(id);
+        console.log(result, "data");
+        setCareer(result?.data || null);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -38,16 +38,15 @@ const CareersDetails = (data) => {
   }
 
   if (!career) {
-    return <div>No blog found</div>;
+    return <div>No career found</div>;
   }
+
   return (
-    <>
-      <div className="info">
-        <h3 className="title" style={{ fontFamily: "Inter" }}>
-          {career?.attributes?.jobTitle}
-        </h3>
-      </div>
-    </>
+    <div className="info">
+      <h3 className="title" style={{ fontFamily: "Inter" }}>
+        {career.attributes.jobTitle}
+      </h3>
+    </div>
   );
 };
 

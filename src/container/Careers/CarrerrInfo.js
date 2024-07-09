@@ -7,9 +7,7 @@ import CareersDetails from '../../components/Careers/CareersDetail.jsx';
 import CareerForm from '../../components/Careers/CarrerForm.jsx';
 import SectionTitle from "../../components/SectionTitles/SectionTitle.jsx"
 
-const CareerInfo = (initialData) => {
-
-
+const CareerInfo = ({ initialData }) => {
     const [career, setCareer] = useState(initialData || null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -35,6 +33,18 @@ const CareerInfo = (initialData) => {
         }
     }, [id, initialData]);
 
+    const sceneEl = useRef(null);
+
+    useEffect(() => {
+        const parallaxInstance = new Parallax(sceneEl.current, {
+            relativeInput: true,
+        });
+
+        parallaxInstance.enable();
+
+        return () => parallaxInstance.disable();
+    }, []);
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -44,46 +54,29 @@ const CareerInfo = (initialData) => {
     }
 
     if (!career) {
-        return <div>No blog found</div>;
+        return <div>No career found</div>;
     }
 
-
-    const sceneEl = useRef(null);
-
-    useEffect(() => {
-        const parallaxInstance = new Parallax(sceneEl.current, {
-            relativeInput: true,
-        })
-
-        parallaxInstance.enable();
-
-        return () => parallaxInstance.disable();
-
-    }, [])
     return (
         <div className="section section-padding-top contact-section">
-
             <div className="container">
                 <div className="row row-cols-lg-2 row-cols-1 align-items-center">
                     <div className="col" data-aos="fade-up">
                         <div className="section-title-two mb-8">
-                            {/* <span className="sub-title">Development that converts and delivers</span> */}
-                            <h3 className="title" >
-                                GET IN TOUCH
-                            </h3>
+                            <h3 className="title">GET IN TOUCH</h3>
                         </div>
                         <div className="contact-Information me-xl-7">
-                            <CareersDetails data={initialData} />
+                            <CareersDetails data={career} />
                         </div>
                     </div>
                     <div className="col mt-lg-0 mt-md-10 mt-8" data-aos="fade-up">
                         <div className="contact-form-section section section-padding-t90-b100 bg-primary-blue">
                             <div className="container">
                                 <div className="row">
-                                    <div >
+                                    <div>
                                         <SectionTitle
                                             headingOption="fz-32"
-                                            title="PLEASE FILL THE Details"
+                                            title="PLEASE FILL THE DETAILS"
                                             subTitle=""
                                         />
                                         <CareerForm />
@@ -91,41 +84,21 @@ const CareerInfo = (initialData) => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                     <div className="col mt-lg-0 mt-md-10 mt-8" data-aos="fade-up">
-
                         <div className="contact-form-area">
-                            <div className="shape shape-1" id="scene" ref={sceneEl}>
-                                {/* <span data-depth="1">
-                                    <img src={process.env.PUBLIC_URL + "/images/shape-animation/contact-shape.png"} alt="" />
-                                </span> */}
-                            </div>
+                            <div className="shape shape-1" id="scene" ref={sceneEl}></div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div className="shape shape-1 scene">
                 <span data-depth="1">
                     <img src={process.env.PUBLIC_URL + "/images/shape-animation/newsletter-shape.png"} alt="" />
                 </span>
             </div>
-
         </div>
-    )
-}
-
-CareerInfo.propTypes = {
-    initialData: PropTypes.shape({
-        attributes: PropTypes.shape({
-            PostBy: PropTypes.string.isRequired,
-            jobTitle: PropTypes.string.isRequired,
-
-
-        }),
-    }),
+    );
 };
 
-export default CareerInfo
+export default CareerInfo;

@@ -19,14 +19,14 @@ const ContactInformationTwo = () => {
 
     }, [])
     return (
-        <div className="section section-padding-top contact-section">
+        <div className="section section-padding-top-50 contact-section">
 
             <div className="container">
                 <div className="row row-cols-lg-2 row-cols-1 align-items-center">
                     <div className="col" data-aos="fade-up">
                         <div className="section-title-two mb-8">
                             {/* <span className="sub-title">Development that converts and delivers</span> */}
-                            <h3 className="title" >
+                            <h3 className="title" style={{ paddingTop: '50px' }} >
                                 GET IN TOUCH
                             </h3>
                         </div>
@@ -46,9 +46,9 @@ const ContactInformationTwo = () => {
                         <GoogleMap />
                     </div>
 
-                    <div className="col mt-lg-0 mt-md-10 mt-8" data-aos="fade-up">
+                    <div >
 
-                        <div className="contact-form-area">
+                        <div >
                             <div className="shape shape-1" id="scene" ref={sceneEl}>
                                 {/* <span data-depth="1">
                                     <img src={process.env.PUBLIC_URL + "/images/shape-animation/contact-shape.png"} alt="" />

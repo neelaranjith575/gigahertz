@@ -15,31 +15,21 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-1 col-lg-1 col-md-2 col-sm-6 col-12 col-12 mb-1 mt-5">
+                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 col-12 mb-1 mt-5">
                         <div className="footer-widget">
                             <div className="footer-widget-content">
-                                <a href="https://gigahertzconsultants.com/services/cloud-giga" target='_blank' style={{ color: 'white', fontFamily: 'Inter', textTransform: 'uppercase', fontSize: '16px' }} rel="noreferrer">Cloud</a>
-
-                            </div>
-                        </div>
-
-                    </div><div className="col-xl-3 col-lg-3 col-md-2 col-sm-6 col-12 col-12 mb-1 mt-5">
-                        <div className="footer-widget">
-                            <div className="footer-widget-content">
-                                <a href="https://gigahertzconsultants.com/services/security-overview" target='_blank' style={{ color: 'white', fontFamily: 'Inter', textTransform: 'uppercase', fontSize: '16px' }} rel="noreferrer">security & backup SERVICES</a>
-
-                            </div>
-                        </div>
-
-                    </div><div className="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-12 col-12 mb-1 mt-5">
-                        <div className="footer-widget">
-                            <div className="footer-widget-content">
-                                <a href="https://geispl.in/" target='_blank' style={{ color: 'white', fontFamily: 'Inter', textTransform: 'uppercase', fontSize: '16px' }} rel="noreferrer">Renewable energy</a>
-
+                                <a href="https://gigahertzconsultants.com/services/cloud-giga" target='_blank' style={{ color: 'white', fontFamily: 'Inter', textTransform: 'uppercase', fontSize: '16px' }} rel="noreferrer">Cloud & Cyber Security</a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-1.5 col-lg-1.5 col-md-2 col-sm-6 col-12 col-12 mb-1 mt-5">
+                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 col-12 mb-1 mt-5">
+                        <div className="footer-widget">
+                            <div className="footer-widget-content">
+                                <a href="https://geispl.in/" target='_blank' style={{ color: 'white', fontFamily: 'Inter', textTransform: 'uppercase', fontSize: '16px' }} rel="noreferrer">Renewable energy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-12 col-12 mb-1 mt-5">
                         <div className="footer-widget">
                             <div className="footer-widget-content">
                                 <a style={{ color: 'white', fontFamily: 'Inter', textTransform: 'uppercase', fontSize: '16px' }}>Help</a>
@@ -47,13 +37,10 @@ const Footer = () => {
                         </div>
                         <div className="footer-widget">
                             <div className="footer-widget-content">
-                                <a href="/#" style={{ color: 'white', fontFamily: 'Inter', fontSize: '15px', fontWeight: 'normal' }}>Chat</a>
-
-                            </div>
-                        </div>
-                        <div className="footer-widget">
-                            <div className="footer-widget-content">
-                                <a href="/" style={{ color: 'white', fontFamily: 'Inter', fontSize: '15px', fontWeight: 'normal' }}>Support</a>
+                                <a href="https://support.gigahertzcomp.com/portal/" style={{
+                                    color: 'white', fontFamily: 'Inter', fontSize: '15px', fontWeight: 'normal',
+                                }} target="_blank" rel="noreferrer"
+                                >Support</a>
 
                             </div>
                         </div>
@@ -70,7 +57,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-2.5 col-lg-2.5 col-md-2 col-sm-6 col-12 col-12 mb-6 mt-5">
+                    <div className="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-12 col-12 mb-6 mt-5">
                         <div className="footer-widget">
                             <div className="footer-widget-content">
                                 <div className="footer-social-inline">

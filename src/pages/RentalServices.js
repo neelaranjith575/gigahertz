@@ -33,16 +33,16 @@ const RentalServices = () => {
     const buttons = [
         { label: "IT INFRASTRUCTURE", url: "/it-infrastructure" },
         { label: "ENTERPRISE SOLUTIONS", url: "/enterprise-solutions" },
-        { label: "RENTAL SERVICES", url: "/rental-services" },
-        { label: "MANAGED SERVICES", url: "/managed-services" }
+        { label: "MANAGED SERVICES", url: "/managed-services" },
+        { label: "RENTAL SERVICES", url: "/rental-services" }
     ];
 
 
     const mobileButtons = [
         { label: "IT ", url: "/it-infrastructure" },
         { label: "ENTERPRISE ", url: "/enterprise-solutions" },
-        { label: "RENTAL ", url: "/rental-services" },
-        { label: "MANAGED ", url: "/managed-services" }
+        { label: "MANAGED ", url: "/managed-services" },
+        { label: "RENTAL ", url: "/rental-services" }
     ];
 
     const serviceImage1 = ServiceImage1

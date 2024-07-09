@@ -16,6 +16,7 @@ const BlogClassic = lazy(() => import("./pages/BlogClassic"));
 const BlogDetails = lazy(() => import("./pages/BlogDetails"));
 const BlogDetailsContainer = lazy(() => import("./container/BlogGrid/BlogDetailsContainer"));
 const CareerInfo = lazy(() => import("./container/Careers/CarrerrInfo"));
+const CareerDetail = lazy(() => import("./pages/CareersDetail"));
 const ItInfraStructure = lazy(() => import("./pages/ItInfraStructure"));
 const EnterPriseSolutions = lazy(() => import("./pages/EnterPriseSolutions"));
 const RentalServices = lazy(() => import("./pages/RentalServices"));
@@ -52,7 +53,9 @@ function App() {
             <Route path={`${process.env.PUBLIC_URL + "/work-details/:id"}`} element={<WorkDetails />} />
             <Route path={`${process.env.PUBLIC_URL + "/blogs"}`} element={<BlogGrid />} />
             <Route path={`${process.env.PUBLIC_URL + "/careers"}`} element={<Careers />} />
-            <Route path={`${process.env.PUBLIC_URL + "/careers-details/:id"}`} element={<CareerInfo />} />
+            {/* <Route path={`${process.env.PUBLIC_URL + "/careers-details/:id"}`} element={<CareerInfo />} />
+             */}
+            <Route path={`${process.env.PUBLIC_URL + "/careers-details/:id"}`} element={<CareerDetail />} />
             <Route path={`${process.env.PUBLIC_URL + "/blog-classic"}`} element={<BlogClassic />} />
             <Route path={`${process.env.PUBLIC_URL + "/tag/:slug"}`} element={<BlogTag />} />
             <Route path={`${process.env.PUBLIC_URL + "/category/:slug"}`} element={<BlogCategories />} />

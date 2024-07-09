@@ -139,7 +139,7 @@ const ServiceContentPage = ({ title, bannerImage, mainContent, solutions, button
                 fontWeight: 700,
                 fontFamily: 'Inter',
                 color: '#000000'
-              }}>OUR SOLUTION</h1>
+              }}>OUR SOLUTIONS</h1>
               <div className="thumbnail">
                 <img className="w-100" src={serviceImage2} alt="Blog Image" />
               </div>

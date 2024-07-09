@@ -25,18 +25,20 @@ const ManagedServices = () => {
         "Scalable solutions with continuous support and management.",
         "24/7 helpdesk and technical support for uninterrupted operations."
     ];
+
     const buttons = [
         { label: "IT INFRASTRUCTURE", url: "/it-infrastructure" },
         { label: "ENTERPRISE SOLUTIONS", url: "/enterprise-solutions" },
-        { label: "RENTAL SERVICES", url: "/rental-services" },
-        { label: "MANAGED SERVICES", url: "/managed-services" }
+        { label: "MANAGED SERVICES", url: "/managed-services" },
+        { label: "RENTAL SERVICES", url: "/rental-services" }
     ];
+
 
     const mobileButtons = [
         { label: "IT ", url: "/it-infrastructure" },
         { label: "ENTERPRISE ", url: "/enterprise-solutions" },
-        { label: "RENTAL ", url: "/rental-services" },
-        { label: "MANAGED ", url: "/managed-services" }
+        { label: "MANAGED ", url: "/managed-services" },
+        { label: "RENTAL ", url: "/rental-services" }
     ];
 
 
