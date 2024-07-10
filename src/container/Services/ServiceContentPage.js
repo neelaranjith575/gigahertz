@@ -16,12 +16,8 @@ const ServiceContentPage = ({ title, bannerImage, mainContent, solutions, button
     navigate(url);
   };
 
-
-
-
   return (
     <React.Fragment>
-
       <Stack className="page-title-section section section-padding-top overlay-two" sx={{
         backgroundImage: `url(${bannerImage})`,
         backgroundPosition: 'center',
