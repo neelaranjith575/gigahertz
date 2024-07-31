@@ -4,27 +4,7 @@ import { useParams } from "react-router-dom";
 import { fetchBlogDetails } from "../../api/blogs";
 import { IMAGE_URL } from "../../configuration/url.config";
 import moment from "moment";
-
-const renderRichText = (content) => {
-  if (Array.isArray(content)) {
-    return content.map((item) => renderRichText(item));
-  }
-
-  if (content.type === "paragraph") {
-    return <p key={Math.random()}>{renderRichText(content.children)}</p>;
-  }
-
-  if (content.type === "text") {
-    const style = content.bold ? { fontWeight: "bold", color: "#000000" } : {};
-    return (
-      <span key={Math.random()} style={style}>
-        {content.text}
-      </span>
-    );
-  }
-
-  return null;
-};
+import { marked } from "marked";
 
 const BlogDetails = ({ data }) => {
   const [blog, setBlog] = useState(data || null);
@@ -66,6 +46,8 @@ const BlogDetails = ({ data }) => {
   const imageUrl = `${IMAGE_URL}${blog?.attributes?.ThumbImage?.data?.attributes?.url}`;
   const images = blog?.attributes?.Images?.data || [];
 
+  const longDescription = marked(blog.attributes.Long_Description);
+
   return (
     <div className="blog-3 blog-details col">
       <div className="thumbnail">
@@ -99,9 +81,14 @@ const BlogDetails = ({ data }) => {
           </div>
         </div>
 
-        <div style={{ fontFamily: "Inter" }} data-aos="fade-up">
+        {/* <div style={{ fontFamily: "Inter" }} data-aos="fade-up">
           {renderRichText(blog?.attributes?.Long_Description)}
-        </div>
+        </div> */}
+        <div
+          style={{ fontFamily: "Inter" }}
+          data-aos="fade-up"
+          dangerouslySetInnerHTML={{ __html: longDescription }}
+        />
 
         <div>
           <ul className="meta mb-0 mt-12" data-aos="fade-up">

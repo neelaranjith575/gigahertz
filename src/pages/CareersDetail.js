@@ -5,38 +5,12 @@ import Header from "../partials/header/Header";
 import Breadcrumb from '../container/Breadcrumb/Breadcrumb';
 import Footer from '../container/Footer/Footer';
 import ScrollToTop from '../components/ScrollToTop.jsx';
-import CareerForm from "../components/Careers/CarrerForm.jsx"
+import CareerForm from "../components/Careers/CarrerForm.jsx";
 import SectionTitle from '../components/SectionTitles/SectionTitle.jsx';
 import { fetchCareersDetails } from "../api/careers.js";
 import Parallax from 'parallax-js';
-import Banner from "../assets/images/services/cb.png"
-
-
-
-const renderRichText = (content) => {
-    if (Array.isArray(content)) {
-        return content.map((item, index) => renderRichText(item));
-    }
-
-    if (content.type === 'paragraph') {
-        return (
-            <p key={Math.random()}>
-                {renderRichText(content.children)}
-            </p>
-        );
-    }
-
-    if (content.type === 'text') {
-        const style = content.bold ? { fontWeight: 'bold' } : {};
-        return (
-            <span key={Math.random()} style={style}>
-                {content.text}
-            </span>
-        );
-    }
-
-    return null;
-};
+import Banner from "../assets/images/services/cb.png";
+import { marked } from "marked";
 
 const CareerDetail = () => {
     const { id } = useParams();
@@ -74,6 +48,9 @@ const CareerDetail = () => {
     }, [sceneEl.current]);
 
     const pageTitle = career ? career.attributes.jobTitle : "Careers Details";
+    const jobDescription = career?.attributes?.jobDescription ? marked(career.attributes.jobDescription) : '';
+    const jobResponsibilities = career?.attributes?.jobResponsibilities ? marked(career.attributes.jobResponsibilities) : '';
+    const jobRequirements = career?.attributes?.jobRequirements ? marked(career.attributes.jobRequirements) : '';
 
     return (
         <React.Fragment>
@@ -96,15 +73,29 @@ const CareerDetail = () => {
                                     <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
                                         Job Overview
                                     </h3>
-                                    <p>{renderRichText(career?.attributes?.jobDescription)}</p>
+                                    <div
+                                        style={{ fontFamily: "Inter" }}
+                                        data-aos="fade-up"
+                                        dangerouslySetInnerHTML={{ __html: jobDescription }}
+                                    />
+
                                     <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
                                         Responsibilities
                                     </h3>
-                                    <p>{renderRichText(career?.attributes?.jobResponsibilities)}</p>
+                                    <div
+                                        style={{ fontFamily: "Inter" }}
+                                        data-aos="fade-up"
+                                        dangerouslySetInnerHTML={{ __html: jobResponsibilities }}
+                                    />
+
                                     <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
                                         Requirements
                                     </h3>
-                                    <p>{renderRichText(career?.attributes?.jobRequirements)}</p>
+                                    <div
+                                        style={{ fontFamily: "Inter" }}
+                                        data-aos="fade-up"
+                                        dangerouslySetInnerHTML={{ __html: jobRequirements }}
+                                    />
                                     <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
                                         Education
                                     </h3>

@@ -5,7 +5,7 @@ const Btn = (props) => {
   return (
     <React.Fragment>
       <a
-        href="https://support.gigahertzcomp.com/portal/"
+        href="https://gigahertzcomp.com/support/login.php"
         className="btn btn-light btn-hover-primary"
         target="_blank"
         rel="noreferrer"

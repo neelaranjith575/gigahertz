@@ -56,7 +56,7 @@ const ServiceContentPage = ({ title, bannerImage, mainContent, solutions, button
                 color: isActive ? '#ffffff' : '#000000',
                 fontWeight: 'bold',
                 fontFamily: 'Inter',
-                fontSize: { xs: '8px', md: '16px' },
+                fontSize: { xs: '8px', md: '15px' },
                 width: 250,
                 backgroundColor: isActive ? '#116FC6' : 'transparent',
                 "&:hover": {

@@ -37,7 +37,7 @@ const Footer = () => {
                         </div>
                         <div className="footer-widget">
                             <div className="footer-widget-content">
-                                <a href="https://support.gigahertzcomp.com/portal/" style={{
+                                <a href="https://gigahertzcomp.com/support/login.php" style={{
                                     color: 'white', fontFamily: 'Inter', fontSize: '15px', fontWeight: 'normal',
                                 }} target="_blank" rel="noreferrer"
                                 >Support</a>
