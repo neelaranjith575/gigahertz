@@ -10,15 +10,15 @@ import Footer from '../container/Footer/Footer';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 
 const BlogDetails = () => {
-    let {id} = useParams();
+    let { id } = useParams();
     const blogId = parseInt(id, 10)
     const data = BlogClassicData.filter(blog => blog.id === blogId);
-    console.log(data,"data")
+    // console.log(data,"data")
     return (
         <React.Fragment>
             <SEO title="Exomac || Blog Details" />
             <Header />
-            <Breadcrumb 
+            <Breadcrumb
                 image={data[0]?.Banner_Image}
                 title={data[0]?.title}
                 content="Home"

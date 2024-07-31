@@ -15,7 +15,7 @@ export const fetchCareersList = async () => {
 export const fetchCareersDetails = async (id) => {
     try {
         const response = await axios.get(`${BASE_URL}/careers/${id}?populate=*`)
-        console.log(response, "response")
+        // console.log(response, "response")
         return response.data;
     }
     catch (error) {
@@ -39,7 +39,7 @@ export const careerDetails = async (name, phone, email, jobName, message, resume
             },
         });
 
-        console.log('Success:', response.data);
+        // console.log('Success:', response.data);
 
     } catch (error) {
         console.error('Error:', error);

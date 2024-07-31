@@ -43,11 +43,6 @@ const NavBar = () => {
                 <span className="menu-text">MANAGED SERVICES</span>
               </NavLink>
             </li>
-            <li>
-              <NavLink to={process.env.PUBLIC_URL + "/fix-your-pc"}>
-                <span className="menu-text">FIX YOUR PC</span>
-              </NavLink>
-            </li>
           </ul>
         </li>
         {/* <li className="has-children">
@@ -71,10 +66,16 @@ const NavBar = () => {
                     <NavLink to={process.env.PUBLIC_URL + "/careers"}><span className="menu-text">CAREERS</span></NavLink>
                 </li> */}
         <li>
+          <NavLink to={process.env.PUBLIC_URL + "/pcaas-service"}>
+            <span className="menu-text">PCaaS</span>
+          </NavLink>
+        </li>
+        <li>
           <NavLink to={process.env.PUBLIC_URL + "/blogs"}>
             <span className="menu-text">BLOGS</span>
           </NavLink>
         </li>
+
         <li>
           <NavLink to={process.env.PUBLIC_URL + "/contact"}>
             <span className="menu-text">CONTACT US</span>

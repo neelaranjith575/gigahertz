@@ -6,6 +6,7 @@ import PageBlog from '../container/BlogGrid/PageBlog';
 import CallToAction from '../container/CallToAction/CallToAction';
 import Footer from '../container/Footer/Footer';
 import ScrollToTop from '../components/ScrollToTop.jsx';
+import Banner from "../assets/images/services/blogser1.png";
 
 
 const BlogGrid = () => {
@@ -13,8 +14,8 @@ const BlogGrid = () => {
         <React.Fragment>
             <SEO title="Gigahertz || Blogs" />
             <Header />
-            <Breadcrumb 
-                image="images/bg/breadcrumb-bg-four.jpg"
+            <Breadcrumb
+                bannerImage={Banner}
                 title="Blogs"
                 content="Home"
                 contentTwo="Blog"

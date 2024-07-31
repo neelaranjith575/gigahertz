@@ -32,7 +32,7 @@ const Footer = () => {
                     <div className="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-12 col-12 mb-1 mt-5">
                         <div className="footer-widget">
                             <div className="footer-widget-content">
-                                <a style={{ color: 'white', fontFamily: 'Inter', textTransform: 'uppercase', fontSize: '16px' }}>Help</a>
+                                <p style={{ color: 'white', fontFamily: 'Inter', textTransform: 'uppercase', fontSize: '16px', fontWeight: 500 }}>Help</p>
                             </div>
                         </div>
                         <div className="footer-widget">
@@ -61,10 +61,10 @@ const Footer = () => {
                         <div className="footer-widget">
                             <div className="footer-widget-content">
                                 <div className="footer-social-inline">
-                                    <a href="#" style={{ padding: '5px', borderRadius: '30px', color: '#ffffff' }}><i className="fab fa-twitter-square"></i></a>
-                                    <a href="#" style={{ padding: '5px', borderRadius: '30px', color: '#ffffff' }}><i className="fab fa-facebook-square"></i></a>
-                                    <a href="#" style={{ padding: '5px', borderRadius: '30px', color: '#ffffff' }}><i className="fab fa-instagram"></i></a>
-                                    <a href="#" style={{ padding: '5px', borderRadius: '30px', color: '#ffffff' }}><i className="fab fa-linkedin"></i></a>
+                                    <a href="https://x.com/GigahertzComp" style={{ padding: '5px', borderRadius: '30px', color: '#ffffff' }}><i className="fab fa-twitter-square"></i></a>
+                                    <a href="https://www.facebook.com/gigahertzcomputingindiapvtltd" style={{ padding: '5px', borderRadius: '30px', color: '#ffffff' }}><i className="fab fa-facebook-square"></i></a>
+                                    {/* <a href="#" style={{ padding: '5px', borderRadius: '30px', color: '#ffffff' }}><i className="fab fa-instagram"></i></a> */}
+                                    <a href="https://www.linkedin.com/company/gigahertz-computing/" style={{ padding: '5px', borderRadius: '30px', color: '#ffffff' }}><i className="fab fa-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ const Footer = () => {
 
                 <div className="row">
                     <div className="col">
-                        <p className="copyright">&copy; {new Date().getFullYear()} <strong> - Gigahertz Computing (India) Private Limited</strong> Made with <i className="fas fa-heart text-danger"></i> by <a href="#"><strong>Webxinfinity</strong></a>.</p>
+                        <p className="copyright">&copy; {new Date().getFullYear()} <strong> - Gigahertz Computing (India) Private Limited</strong> Made with <i className="fas fa-heart text-danger"></i> by <a href="https://webxinfinity.com"><strong>Webxinfinity</strong></a>.</p>
                     </div>
                 </div>
 

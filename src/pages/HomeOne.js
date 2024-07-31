@@ -15,7 +15,7 @@ import TestimonialContainer from '../container/Testimonial/TestimonialContainer'
 const HomeOne = () => {
     return (
         <React.Fragment>
-            <SEO title="Home – Gigahurtz" />
+            <SEO title="Gigahertz - Integrated IT Solutions " />
             <Header />
             <HomeBanner />
             <BrandContainer classOption="section" />

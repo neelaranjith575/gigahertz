@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { contactDetails } from "../../api/contact";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const {
@@ -16,12 +16,18 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      await contactDetails(
-        data.name,
-        data.phone,
-        data.email,
-        data.subject,
-        data.message
+      // Sending email via EmailJS
+      await emailjs.send(
+        "service_852961k",
+        "template_vw400v9",
+        {
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        "OjaHPzDqBkQOLjcjO"
       );
       navigate("/thank-you");
     } catch (error) {

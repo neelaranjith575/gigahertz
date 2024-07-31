@@ -28,7 +28,7 @@ const CareerForm = () => {
       navigate("/thank-you");
       if (data.status === 200) {
         enqueueSnackbar("Details Sent Successfully", { variant: "success" });
-        navigate("/explore-communities");
+        navigate("/thank-you");
       }
     } catch (error) {
       console.error("Submission error:", error);

@@ -29,18 +29,19 @@ const HomeSkillWithVideo = () => {
                                 Gigahertz, a thriving IT company, began by focusing on IT
                                 infrastructure services, especially computer sales and services.
                                 Then expanded to system integration, network security to
-                                enterprise solutions with over 25 years of experience. Gigahertz
+                                enterprise solutions and so on. With over 25 years of experience, Gigahertz
                                 strives hard to thrive in its area of work and much more to find
                                 supremacy in providing integrated solutions in the field of
                                 Information Technology.
                             </p>
                             <p style={{ color: "#525252", fontFamily: "Inter" }}>
                                 Now, Gigahertz has also expanded the business in the areas of
-                                Cloud Solutions, I T Security Solutions, Back and Storage
-                                Solutions and Industrial Automation with the company&apos;s
-                                goals and objectives. Company mission is to provide flawless
-                                integrated solutions to all the customers making it easy for to
-                                implement, use, automate and secure it seamlessly.
+                                Cloud Solutions, IT Security Solutions, Backup and Storage
+                                Solutions and Industrial Automation. While Cloud, Cyber, and Industrial Automation
+                                are managed by different entities within Gigahertz, Gigahertz Computing focuses
+                                primarily on IT with the mission to provide flawless
+                                integrated solutions to all the customers making it easy to
+                                implement, use, automate and secure the infrastructure seamlessly.
                             </p>
                             <p style={{ color: "#525252", fontFamily: "Inter" }}>
                                 Our vision is to mark a niche in the IT market, reachable to

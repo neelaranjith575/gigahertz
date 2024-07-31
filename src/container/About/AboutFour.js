@@ -62,9 +62,9 @@ const AboutFour = () => {
                             <div className="video-popup-area">
                                 <div className="skill-video">
                                     <h3 style={{ fontFamily: 'Inter', fontSize: '35px' }}>ABOUT US</h3>
-                                    <p style={{ color: '#525252', fontFamily: 'Inter' }}>Gigahertz Computing&apos;s story began in Bangalore in 1999, a fresh start under proprietorship. They drove headfirst into the world of computers and peripherals, offering sales and services. The IT revolution was in full swing, and Gigahertz quickly established itself as a leader in computer hardware and services, leveraging their deep knowledge and expertise to build a large and loyal customer base. Their reach expanded to include public sectors, government organizations, multinational corporations, and educational institutions.</p>
-                                    <p style={{ color: '#525252', fontFamily: 'Inter' }}>Gigahertz didn&apos;t stop there. They saw an opportunity to expand by partnering with Original Equipment Manufacturers (OEMs). By undergoing rigorous training, they became certified to not only sell, but also service and support these OEM products. Today, Gigahertz proudly holds registered partnership status with some of the world&apos;s leading OEMs, such as AWS, Dell, HP, Acronics, Sophos and so on.</p>
-                                    <p style={{ color: '#525252', fontFamily: 'Inter' }}>The company has witnessed remarkable growth since its inception. From a finger counting team members to over three digit headcount. Their service offerings have also diversified significantly, now encompassing not only Infrastructure hardware and services, but also networking solutions, CCTV surveillance, email security, software development, and more.</p>
+                                    <p style={{ color: '#525252', fontFamily: 'Inter' }}>Gigahertz Computing&apos;s story began in Bangalore in 1999, a fresh start under proprietorship. They drove headfirst into the world of computers and peripherals, offering sales and services. The IT revolution was in full swing, and Gigahertz quickly established itself as a leader in computer hardware and services, leveraging their deep knowledge and expertise to build a large and loyal customer base. Their reach expanded to include public sectors, government organizations, multinational corporations, educational institutions, etc</p>
+                                    <p style={{ color: '#525252', fontFamily: 'Inter' }}>Gigahertz saw an opportunity to expand by partnering with Original Equipment Manufacturers (OEMs). Undergoing rigorous training, Gigahertz is certified to not only sell, but also service and support the OEM products. Today, Gigahertz proudly holds registered partnership status with some of the world&apos;s leading OEMs, such as HPE, Dell, Lenovo, Gigabyte, ASUS, Mircosoft, Fortinet, Acronis, Sophos and so on.</p>
+                                    <p style={{ color: '#525252', fontFamily: 'Inter' }}>The company has witnessed remarkable growth since its inception. Their service offerings have also diversified significantly, now encompassing not only Infrastructure hardware and services, but also networking solutions, CCTV surveillance, email security and more.</p>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ const AboutFour = () => {
                     <div className="card-container">
                         <FlipCard
                             frontText="Beyond Hardware: Building Integrated Systems"
-                            backText="Gigahertz Computing Solutions doesn't just sell computer parts; they offer a comprehensive service. They act as IT consultants, helping clients design and build customized computing systems that perfectly meet their needs. This involves combining hardware and software products from various vendors to create a seamless, integrated solution."
+                            backText="Gigahertz Computing doesn't just sell computer parts; they offer a comprehensive service. They act as IT consultants, helping clients design and build customized computing systems that perfectly meet their needs. This involves combining hardware and software products from various vendors to create a seamless, integrated solution."
                         />
                         <FlipCard
                             frontText="Integration: Achieving More for Less"
@@ -87,7 +87,7 @@ const AboutFour = () => {
                         />
                         <FlipCard
                             frontText="Crafting Information Systems: Tailored Solutions"
-                            backText="The creation of these information systems can involve a variety of tasks. Gigahertz can design and build a customized Optical Mark Recognition (OMR) application architecture, integrate it with existing or new hardware and software, and ensure seamless communication within your infrastructure."
+                            backText="The creation of these information systems can involve a variety of tasks. Gigahertz can design and build a customized IT infrastructure which can integrate it with existing or new hardware and software, and ensure seamless communication within your infrastructure."
                         />
                         <FlipCard
                             frontText="Beyond Products: IT Consulting Expertise"
@@ -99,7 +99,7 @@ const AboutFour = () => {
                     vissionHeading="OUR VISION"
                     vissionContent="Our vision is to mark a niche in the IT market, reachable to every customer who are wanting flawless and seamless solution for their setup."
                     missionHeading="OUR MISSION"
-                    missionContent="Gigahertz is working towards expanding the businesses in the areas of Automation, Cloud Solutions, Resource Placements and Security solutions in alignment with the company’s goals and objectives. Company’s mission is to provide flawless integrated solutions to all our customers making it easy for them to implement, automate and secure it seamlessly."
+                    missionContent="Our mission is to provide flawless integrated solutions to all our customers making it easy for them to implement, automate and secure it seamlessly."
                 />
 
                 <div className="container" >

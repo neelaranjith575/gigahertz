@@ -5,8 +5,8 @@ import CallToAction from '../container/CallToAction/CallToAction.js';
 import Footer from '../container/Footer/Footer.js';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 import Banner from "../assets/images/services/b4.png";
-import ServiceImage1 from "../assets/images/services/ITB1 (1).jpg"
-import ServiceImage2 from "../assets/images/services/ITB1 (2).jpg"
+import ServiceImage1 from "../assets/images/services/rs2.jpeg"
+import ServiceImage2 from "../assets/images/services/rs1.jpg"
 import ServiceContentPage from '../container/Services/ServiceContentPage.js';
 
 

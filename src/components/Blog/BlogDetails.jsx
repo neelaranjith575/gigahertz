@@ -5,6 +5,27 @@ import { fetchBlogDetails } from "../../api/blogs";
 import { IMAGE_URL } from "../../configuration/url.config";
 import moment from "moment";
 
+const renderRichText = (content) => {
+  if (Array.isArray(content)) {
+    return content.map((item) => renderRichText(item));
+  }
+
+  if (content.type === "paragraph") {
+    return <p key={Math.random()}>{renderRichText(content.children)}</p>;
+  }
+
+  if (content.type === "text") {
+    const style = content.bold ? { fontWeight: "bold", color: "#000000" } : {};
+    return (
+      <span key={Math.random()} style={style}>
+        {content.text}
+      </span>
+    );
+  }
+
+  return null;
+};
+
 const BlogDetails = ({ data }) => {
   const [blog, setBlog] = useState(data || null);
   const [loading, setLoading] = useState(true);
@@ -54,17 +75,23 @@ const BlogDetails = ({ data }) => {
         <h3 className="title" style={{ fontFamily: "Inter" }}>
           {blog?.attributes?.Title}
         </h3>
-        <p style={{fontFamily:'Inter'}}>{blog?.attributes?.Short_Description}</p>
+        <p style={{ fontFamily: "Inter" }}>
+          {blog?.attributes?.Short_Description}
+        </p>
 
         <div className="custom-layout-gallery mt-lg-5 mt-5 mb-5">
           <div className="row">
             {images.map((image, index) => (
-              <div key={index} className="col-lg-6 col-md-6 col-12 mt-lg-0 mt-md-0 mt-10">
+              <div
+                key={index}
+                className="col-lg-6 col-md-6 col-12 mt-lg-0 mt-md-0 mt-10"
+              >
                 <div className="thumbnail" data-aos="fade-up">
                   <img
-                    className="w-100" style={{height:'300px'}}
+                    className="w-100"
+                    style={{ height: "300px" }}
                     src={`${IMAGE_URL}${image.attributes.url}`}
-                    alt={image.attributes.alternativeText || 'Blog Image'}
+                    alt={image.attributes.alternativeText || "Blog Image"}
                   />
                 </div>
               </div>
@@ -72,20 +99,41 @@ const BlogDetails = ({ data }) => {
           </div>
         </div>
 
-        <p style={{fontFamily:'Inter'}} data-aos="fade-up">{blog?.attributes?.Long_Description}</p>
+        <div style={{ fontFamily: "Inter" }} data-aos="fade-up">
+          {renderRichText(blog?.attributes?.Long_Description)}
+        </div>
 
         <div>
           <ul className="meta mb-0 mt-12" data-aos="fade-up">
-            <li style={{fontSize:'16px', fontWeight:'bold', fontFamily:'Inter', color:'black'}}>
+            <li
+              style={{
+                fontSize: "16px",
+                fontWeight: "bold",
+                fontFamily: "Inter",
+                color: "black",
+              }}
+            >
               <i className="fa fa-pencil-alt"></i>
               {blog?.attributes?.Author}
             </li>
-            <li style={{fontSize:'16px', fontWeight:'bold', fontFamily:'Inter', color:'black'}}>
+            <li
+              style={{
+                fontSize: "16px",
+                fontWeight: "bold",
+                fontFamily: "Inter",
+                color: "black",
+              }}
+            >
               <i className="far fa-calendar"></i>
               {moment(blog?.attributes?.publishedAt).format("MMMM D, YYYY")}
             </li>
           </ul>
-          <p style={{fontFamily:'Inter', fontStyle:'italic'}} data-aos="fade-up">{blog?.attributes?.Author_Description}</p>
+          <p
+            style={{ fontFamily: "Inter", fontStyle: "italic" }}
+            data-aos="fade-up"
+          >
+            {blog?.attributes?.Author_Description}
+          </p>
         </div>
       </div>
     </div>
@@ -98,7 +146,7 @@ BlogDetails.propTypes = {
       PostBy: PropTypes.string.isRequired,
       Title: PropTypes.string.isRequired,
       Category: PropTypes.string.isRequired,
-      Long_Description: PropTypes.string.isRequired,
+      Long_Description: PropTypes.array.isRequired,
       Short_Description: PropTypes.string.isRequired,
       publishedAt: PropTypes.string.isRequired,
       imageUrl: PropTypes.string.isRequired,
@@ -110,7 +158,7 @@ BlogDetails.propTypes = {
           attributes: PropTypes.shape({
             url: PropTypes.string.isRequired,
             alternativeText: PropTypes.string,
-          })
+          }),
         })
       ).isRequired,
     }),

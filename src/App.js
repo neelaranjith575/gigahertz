@@ -69,7 +69,7 @@ function App() {
             <Route path={`${process.env.PUBLIC_URL + "/managed-services"}`} element={<ManagedServices />} />
             <Route path={`${process.env.PUBLIC_URL + "/contact"}`} element={<Contact />} />
             <Route path={`${process.env.PUBLIC_URL + "/thank-you"}`} element={<Thankyou />} />
-            <Route path={`${process.env.PUBLIC_URL + "/fix-your-pc"}`} element={<FixYourPc />} />
+            <Route path={`${process.env.PUBLIC_URL + "/pcaas-service"}`} element={<FixYourPc />} />
             <Route path={`${process.env.PUBLIC_URL + "/fix-your-pc-form"}`} element={<FixForm />} />
           </Routes>
         </Suspense>

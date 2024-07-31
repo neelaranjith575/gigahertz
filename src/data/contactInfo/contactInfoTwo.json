@@ -3,7 +3,8 @@
         "id": "1",
         "icon": "images/svg/linea/linea-basic-map.svg",
         "title": "Office Address",
-        "info": "Gigahertz Computing India Pvt Ltd  #716, 2nd Floor, 3rd Main, 9th Cross, Dr. Modi Hospital Road, Next to Ganesh temple,West of Chord Road, Rajajinagar, Bengaluru, Karnataka-560086"
+        "companyName": "Gigahertz Computing India Pvt Ltd",
+        "info": "#716, 2nd Floor, 3rd Main, 9th Cross, Dr. Modi Hospital Road, Next to Ganesh temple,West of Chord Road, Rajajinagar, Bengaluru, Karnataka-560086"
     },
     {
         "id": "2",

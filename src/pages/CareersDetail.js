@@ -9,6 +9,34 @@ import CareerForm from "../components/Careers/CarrerForm.jsx"
 import SectionTitle from '../components/SectionTitles/SectionTitle.jsx';
 import { fetchCareersDetails } from "../api/careers.js";
 import Parallax from 'parallax-js';
+import Banner from "../assets/images/services/cb.png"
+
+
+
+const renderRichText = (content) => {
+    if (Array.isArray(content)) {
+        return content.map((item, index) => renderRichText(item));
+    }
+
+    if (content.type === 'paragraph') {
+        return (
+            <p key={Math.random()}>
+                {renderRichText(content.children)}
+            </p>
+        );
+    }
+
+    if (content.type === 'text') {
+        const style = content.bold ? { fontWeight: 'bold' } : {};
+        return (
+            <span key={Math.random()} style={style}>
+                {content.text}
+            </span>
+        );
+    }
+
+    return null;
+};
 
 const CareerDetail = () => {
     const { id } = useParams();
@@ -52,14 +80,14 @@ const CareerDetail = () => {
             <SEO title="Gigahertz || Careers Details" />
             <Header />
             <Breadcrumb
-                bannerImage="images/bg/6.png"
+                bannerImage={Banner}
                 title={pageTitle}
                 content="Home"
                 contentTwo="Role Overview"
             />
             <div className="section section-padding-top contact-section">
                 <div className="container">
-                    <div className="row row-cols-lg-2 row-cols-1 align-items-center">
+                    <div className="row row-cols-lg-2 row-cols-1">
                         <div className="col" data-aos="fade-up">
                             {loading && <div>Loading...</div>}
                             {error && <div>Error: {error}</div>}
@@ -68,15 +96,15 @@ const CareerDetail = () => {
                                     <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
                                         Job Overview
                                     </h3>
-                                    <p>{career?.attributes?.jobDescription}</p>
+                                    <p>{renderRichText(career?.attributes?.jobDescription)}</p>
                                     <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
                                         Responsibilities
                                     </h3>
-                                    <p>{career?.attributes?.jobResponsibilities}</p>
+                                    <p>{renderRichText(career?.attributes?.jobResponsibilities)}</p>
                                     <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
                                         Requirements
                                     </h3>
-                                    <p>{career?.attributes?.jobRequirements}</p>
+                                    <p>{renderRichText(career?.attributes?.jobRequirements)}</p>
                                     <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
                                         Education
                                     </h3>
@@ -93,6 +121,11 @@ const CareerDetail = () => {
                                         Industry
                                     </h3>
                                     <p>{career?.attributes?.jobIndustry}</p>
+
+                                    <h3 className="title" style={{ fontFamily: "Bebas Neue" }}>
+                                        No of Openings
+                                    </h3>
+                                    <p>{career?.attributes?.noOfOpenings} Openings</p>
 
                                 </div>
 

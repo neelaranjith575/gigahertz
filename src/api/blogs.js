@@ -16,7 +16,7 @@ export const fetchBlogs = async () => {
 export const fetchBlogDetails = async (id) => {
     try {
         const response = await axios.get(`${BASE_URL}/blogs/${id}?populate=*`)
-        console.log(response, "response")
+        // console.log(response, "response")
         return response.data;
     }
     catch (error) {

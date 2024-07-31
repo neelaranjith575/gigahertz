@@ -46,7 +46,10 @@ const Header = () => {
                   image={`${process.env.PUBLIC_URL}/images/logo/logo.png`}
                 />
               </div>
-              <div className="col-auto col-xl-7 d-flex align-items-center justify-content-xl-center justify-content-end order-2 order-xl-1">
+              <div
+                className="col-auto col-xl-8 d-flex align-items-center justify-content-xl-center justify-content-end order-2 order-xl-1"
+                style={{ marginLeft: "-80px" }}
+              >
                 <div className="menu-column-area d-none d-xl-block position-static">
                   <NavBar />
                 </div>
@@ -69,7 +72,7 @@ const Header = () => {
                 </div>
               </div>
 
-              <div className="col-xl-3 col d-none d-sm-flex justify-content-end order-1 order-xl-2">
+              <div className="col-xl-2 col d-none d-sm-flex justify-content-end order-1 order-xl-2">
                 <Btn name="RAISE A TICKET ↗" />
               </div>
             </div>

@@ -31,7 +31,7 @@ const HomeServices = () => {
                   textAlign: "center",
                 }}
               >
-                We offers a complete and scalable range of flexible <br></br>
+                We offer a complete and scalable range of flexible <br></br>
                 solutions for outsourcing the daily management of your IT tasks
                 and functions.
               </p>
@@ -50,7 +50,7 @@ const HomeServices = () => {
                     },
                     {
                       src: Service2,
-                      label: "ENTERPRISE SOLUTIONS",
+                      label: "ENTERPRISE Solutions",
                       url: "enterprise-solutions",
                     },
                     {
@@ -109,7 +109,7 @@ const HomeServices = () => {
                           sx={{
                             fontSize: {
                               xs: "20px",
-                              md: "50px",
+                              md: "40px",
                               transition: "transform 0.3s ease-in-out",
                               cursor: "pointer",
                             },

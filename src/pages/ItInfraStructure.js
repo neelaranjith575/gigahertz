@@ -26,7 +26,7 @@ const ItInfraStructure = () => {
         "Network design and management for seamless connectivity.",
         "Data center operations ensuring data security and uptime.",
         "Comprehensive IT support and maintenance services.",
-        "Secure cloud service provisioning and management."
+        "Biometric & CCTV surveillance solutions"
     ];
 
     const buttons = [

@@ -16,8 +16,8 @@ export const contactDetails = async (name, phone, email, subject, message) => {
             },
         });
 
-        console.log('Success:', response.data);
-        
+        // console.log('Success:', response.data);
+
     } catch (error) {
         console.error('Error:', error);
     }

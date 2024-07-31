@@ -76,7 +76,17 @@ const MobileNavMenu = () => {
                 <span className="menu-text">MANAGED SERVICES</span>
               </NavLink>
             </li>
+            {/* <li>
+              <NavLink to={process.env.PUBLIC_URL + "/pcaas-service"}>
+                <span className="menu-text">FIX YOUR PC</span>
+              </NavLink>
+            </li> */}
           </ul>
+        </li>
+        <li>
+          <NavLink to={process.env.PUBLIC_URL + "/pcaas-service"}>
+            <span className="menu-text">PCaaS</span>
+          </NavLink>
         </li>
         {/* <li className="has-children">
                     <NavLink to={process.env.PUBLIC_URL + "/work"}><span className="menu-text">Work</span></NavLink>
@@ -105,6 +115,7 @@ const MobileNavMenu = () => {
             <span className="menu-text">BLOGS</span>
           </NavLink>
         </li>
+
         <li>
           <NavLink to={process.env.PUBLIC_URL + "/contact"}>
             <span className="menu-text">CONTACT US</span>
