@@ -1,10 +1,11 @@
 // src/components/ContentPage.js
 import React from 'react';
-import { List, ListItem, ListItemText, ListItemIcon, Stack, Button, Typography } from "@mui/material";
+import { List, ListItem, ListItemText, ListItemIcon, Stack, Button } from "@mui/material";
 import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 
+// eslint-disable-next-line react/prop-types
 const ServiceContentPage = ({ title, bannerImage, mainContent, solutions, buttons, sideContent, mobileButtons, serviceImage1, serviceImage2 }) => {
 
   const navigate = useNavigate();

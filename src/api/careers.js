@@ -31,7 +31,7 @@ export const careerDetails = async (name, phone, email, jobName, message, resume
     try {
         const formData = new FormData();
         formData.append('data', JSON.stringify({ name, phone, email, jobName, message }));
-        formData.append('files.resume', resume[0]);
+        formData.append('files.resume', resume);
 
         const response = await axios.post(`${BASE_URL}/carrerforms`, formData, {
             headers: {

@@ -31,8 +31,6 @@ const AboutFour = () => {
                 <div className="container">
 
                     <div className="row align-items-center">
-
-
                         <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up">
                             <div className="skill-with-video-content">
                                 <div className="about-image-area about-shape-animation right-0 me-0">

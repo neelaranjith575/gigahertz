@@ -7,6 +7,7 @@ import VisibilitySensor from "react-visibility-sensor";
 
 const HomeAboutTwo = () => {
     const [didViewCountUp, setDidViewCountUp] = useState(false);
+    
 
     const onVisibilityChange = isVisible => {
         if (isVisible) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,13 +47,13 @@ const Footer = () => {
                         </div>
                         <div className="footer-widget">
                             <div className="footer-widget-content">
-                                <a href="/contact" style={{ color: 'white', fontFamily: 'Inter', fontSize: '16px', fontWeight: 'normal' }}>Contact</a>
+                                <Link to="/contact" style={{ color: 'white', fontFamily: 'Inter', fontSize: '16px', fontWeight: 'normal' }}>Contact</Link>
 
                             </div>
                         </div>
                         <div className="footer-widget">
                             <div className="footer-widget-content">
-                                <a href="/careers" style={{ color: 'white', fontFamily: 'Inter', fontSize: '16px', fontWeight: 'normal' }}>Careers</a>
+                                <Link to="/careers" style={{ color: 'white', fontFamily: 'Inter', fontSize: '16px', fontWeight: 'normal' }}>Careers</Link>
 
                             </div>
                         </div>
@@ -91,7 +92,7 @@ const Footer = () => {
 
                 <div className="row">
                     <div className="col">
-                        <p className="copyright">&copy; {new Date().getFullYear()} <strong> - Gigahertz Computing (India) Private Limited</strong> Made with <i className="fas fa-heart text-danger"></i> by <a href="https://webxinfinity.com"><strong>Webxinfinity</strong></a>.</p>
+                        <p className="copyright">&copy; {new Date().getFullYear()} <strong> - Gigahertz Computing (India) Private Limited</strong>.</p>
                     </div>
                 </div>
 
