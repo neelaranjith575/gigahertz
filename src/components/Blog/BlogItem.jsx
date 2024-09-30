@@ -37,15 +37,12 @@ const imageUrl = `${IMAGE_URL}${data?.ThumbImage}`;
 
 BlogItem.propTypes = {
     data: PropTypes.shape({
-
         id: PropTypes.number.isRequired,
         Title: PropTypes.string.isRequired,
         Long_Description: PropTypes.string.isRequired,
         Short_Description: PropTypes.string.isRequired,
         publishedAt:PropTypes.string.isRequired,
         ThumbImage:PropTypes.string.isRequired,
-        
-        // ratings: PropTypes.number.isRequired,
       }).isRequired,
 };
 
