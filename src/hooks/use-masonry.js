@@ -5,6 +5,8 @@ import {flatDeep} from "../utils";
 
 const useMasonry = (portfolioData, masonryListWrap, masonryGrid, btnWrap, btn) => {
     const [categories, setCategories] = useState([]);
+
+    
     useEffect(() => {
         const mixCategories = portfolioData.map(item => {
             return item.categories.map(cat => cat)
